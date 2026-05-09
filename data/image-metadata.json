@@ -1,5 +1,18 @@
 [
   {
+    "image_id": "26d7d6ca-d9e2-465d-90ad-5760cd662f81",
+    "user_id": "user_123",
+    "original_file_name": "photo_2026-05-09_13-56-50.jpg",
+    "storage_url": "/api/uploads/26d7d6ca-d9e2-465d-90ad-5760cd662f81-photo_2026-05-09_13-56-50.jpg",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 94751,
+    "width_px": 959,
+    "height_px": 1280,
+    "aspect_ratio": 0.7492,
+    "uploaded_at": 1778315612909,
+    "status": "uploaded"
+  },
+  {
     "image_id": "7a386f52-4610-4de9-b85e-3e32dd6349e5",
     "user_id": "user_123",
     "original_file_name": "photo_2026-05-09_13-56-50.jpg",

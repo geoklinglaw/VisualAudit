@@ -917,7 +917,7 @@ export function LandingPage() {
                   htmlFor="landing-focus-prompt"
                   className="mb-2 block text-[0.7rem] font-bold uppercase tracking-[0.13em] text-black/30"
                 >
-                  Claim or Question to Verify
+                  Upload your question and the answer given by AI
                 </label>
                 <textarea
                   id="landing-focus-prompt"

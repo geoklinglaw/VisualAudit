@@ -1,0 +1,267 @@
+{
+  "id": "fashion_analysis_pack",
+  "name": "Spectacles Choice Framework",
+  "description": "A structured visual-analysis framework for evaluating spectacle choices based on facial aesthetics about observable evidence and non-diagnostic language.",
+  "observable_entities": [
+    "upper_garment",
+    "lower_garment",
+    "outerwear",
+    "footwear",
+    "belt",
+    "accessory",
+    "bag",
+    "neckline",
+    "collar",
+    "lapel",
+    "hemline",
+    "waistline",
+    "shoulder_seam",
+    "sleeve",
+    "fabric_surface",
+    "pattern",
+    "print",
+    "silhouette_edge",
+    "layer_boundary",
+    "shoe_to_hem_transition",
+    "body_outline",
+    "hip_line",
+    "shoulder_line",
+    "vertical_line",
+    "horizontal_line",
+    "texture_zone",
+    "focal_element",
+    "color_block",
+    "garment_boundary"
+  ],
+  "observation_categories": [
+    "continuity",
+    "segmentation",
+    "silhouette",
+    "line_direction",
+    "proportion",
+    "focal_point",
+    "contrast",
+    "color",
+    "fit",
+    "texture",
+    "drape",
+    "structure",
+    "occasion"
+  ],
+  "item_categories": [
+    "tailoring",
+    "suiting",
+    "casualwear",
+    "streetwear",
+    "formalwear",
+    "businesswear",
+    "athleisure",
+    "outerwear",
+    "knitwear",
+    "denim",
+    "footwear",
+    "accessories",
+    "layering_systems",
+    "eveningwear",
+    "minimalist_wardrobe",
+    "capsule_wardrobe"
+  ],
+  "subject_types": [
+    "full_body_photo",
+    "mirror_selfie",
+    "editorial_photo",
+    "street_style_photo",
+    "runway_photo",
+    "flatlay",
+    "mannequin",
+    "fashion_campaign",
+    "portrait_with_outfit",
+    "cropped_outfit_photo"
+  ],
+  "principles": [
+    {
+      "id": "monochromatic_vertical_continuity",
+      "category": "continuity",
+      "principle": "A single-color or tonal outfit spanning head to toe with minimal interruption creates an unbroken vertical visual path that may elongate the perceived silhouette."
+    },
+    {
+      "id": "horizontal_segmentation_waist",
+      "category": "segmentation",
+      "principle": "A strong tonal or structural contrast at the waist zone visually divides the figure into upper and lower segments."
+    },
+    {
+      "id": "shoulder_width_silhouette_balance",
+      "category": "silhouette",
+      "principle": "The apparent width of the shoulder line relative to the hip line determines whether the silhouette reads as balanced, top-heavy, or bottom-heavy."
+    },
+    {
+      "id": "vertical_line_elongation",
+      "category": "line_direction",
+      "principle": "Vertical seams, plackets, stripes, openings, or garment edges may increase perceived vertical length."
+    },
+    {
+      "id": "horizontal_line_width_perception",
+      "category": "line_direction",
+      "principle": "Horizontal lines and color blocks may increase perceived width in the zone where they appear."
+    },
+    {
+      "id": "fit_first_silhouette_clarity",
+      "category": "silhouette",
+      "principle": "Garments aligned closely to the body create clearer silhouette edges than garments with uncontrolled excess fabric."
+    },
+    {
+      "id": "proportion_top_bottom_ratio",
+      "category": "proportion",
+      "principle": "The visual ratio between upper and lower garment zones influences perceived body proportion."
+    },
+    {
+      "id": "third_rule_garment_length",
+      "category": "proportion",
+      "principle": "Garment hemlines terminating near visual thirds interact differently with body proportion than midpoint hemlines."
+    },
+    {
+      "id": "oversized_silhouette_volume_distribution",
+      "category": "silhouette",
+      "principle": "Oversized garments redistribute silhouette volume outward from the body and alter perceived mass distribution."
+    },
+    {
+      "id": "layering_continuity_disruption",
+      "category": "continuity",
+      "principle": "Layering introduces additional edges and boundaries that either preserve or disrupt silhouette continuity."
+    },
+    {
+      "id": "shoe_pant_continuity",
+      "category": "continuity",
+      "principle": "Matching tonal values between footwear and lower garments reduces interruption at the hemline."
+    },
+    {
+      "id": "neckline_focal_geometry",
+      "category": "focal_point",
+      "principle": "Neckline geometry frames the face and directs visual attention inward, downward, or horizontally."
+    },
+    {
+      "id": "waist_definition_structure",
+      "category": "proportion",
+      "principle": "Waist definition creates a narrowing at the midsection that structures upper-to-lower proportional reading."
+    },
+    {
+      "id": "hem_width_silhouette_base",
+      "category": "silhouette",
+      "principle": "Hem width determines whether the silhouette base reads as narrow, columnar, tapered, or flared."
+    },
+    {
+      "id": "visual_weight_distribution_zones",
+      "category": "proportion",
+      "principle": "Visual weight is distributed through color, volume, texture, and structure across garment zones."
+    },
+    {
+      "id": "warm_cool_undertone_contrast",
+      "category": "color",
+      "principle": "Warm or cool garment undertones create harmony or contrast relative to visible skin undertones."
+    },
+    {
+      "id": "high_contrast_focal_emphasis",
+      "category": "contrast",
+      "principle": "High tonal or chromatic contrast concentrates visual attention at the contrast boundary."
+    },
+    {
+      "id": "tonal_outfit_low_contrast",
+      "category": "contrast",
+      "principle": "Low tonal contrast across garments creates a unified visual field with reduced segmentation."
+    },
+    {
+      "id": "complementary_color_tension",
+      "category": "color",
+      "principle": "Complementary hues create visible chromatic tension and focal boundaries."
+    },
+    {
+      "id": "analogous_color_harmony",
+      "category": "color",
+      "principle": "Adjacent hues on the color wheel produce low-tension chromatic harmony."
+    },
+    {
+      "id": "neutral_palette_versatility",
+      "category": "color",
+      "principle": "Neutral palettes reduce chromatic complexity and emphasize silhouette and structure."
+    },
+    {
+      "id": "accent_color_focal_placement",
+      "category": "focal_point",
+      "principle": "A single accent color in a restrained palette becomes a dominant focal element."
+    },
+    {
+      "id": "saturation_contrast_outfit_energy",
+      "category": "color",
+      "principle": "Overall saturation level influences whether an outfit reads as high-energy or restrained."
+    },
+    {
+      "id": "fabric_drape_silhouette_softness",
+      "category": "drape",
+      "principle": "High-drape fabrics create soft, gravity-following silhouette edges."
+    },
+    {
+      "id": "fabric_stiffness_structure_projection",
+      "category": "structure",
+      "principle": "Low-drape fabrics project structured silhouette edges independent of body contour."
+    },
+    {
+      "id": "tension_pulling_fit_signal",
+      "category": "fit",
+      "principle": "Visible tension lines indicate garment stress and possible fit compression in that zone."
+    },
+    {
+      "id": "excess_fabric_fit_signal",
+      "category": "fit",
+      "principle": "Excess visible fabric may indicate looseness or intentional oversized design."
+    },
+    {
+      "id": "shoulder_seam_placement_tailoring",
+      "category": "fit",
+      "principle": "Shoulder seam placement relative to the shoulder crest is a core tailoring fit indicator."
+    },
+    {
+      "id": "trouser_break_length_signal",
+      "category": "fit",
+      "principle": "Trouser break amount determines the visual finish and proportional reading of the lower silhouette."
+    },
+    {
+      "id": "texture_contrast_surface_interest",
+      "category": "texture",
+      "principle": "Contrasting textures create visual differentiation without relying on color contrast."
+    },
+    {
+      "id": "tonal_texture_monochrome_depth",
+      "category": "texture",
+      "principle": "Texture variation within a monochrome palette creates depth while preserving tonal continuity."
+    },
+    {
+      "id": "pattern_mixing_scale_rule",
+      "category": "texture",
+      "principle": "Pattern scale differentiation reduces visual conflict when combining multiple prints."
+    },
+    {
+      "id": "formal_dress_code_visual_indicators",
+      "category": "occasion",
+      "principle": "Formalwear is associated with specific observable silhouette and garment markers."
+    },
+    {
+      "id": "business_formal_visual_indicators",
+      "category": "occasion",
+      "principle": "Business formal attire is associated with structured tailoring, conservative palettes, and restrained visual signals."
+    }
+  ],
+  "forbidden_claims": [
+    "Do not infer attractiveness, desirability, or romantic value.",
+    "Do not infer intelligence, competence, wealth, or status.",
+    "Do not infer personality traits from clothing.",
+    "Do not infer gender identity, sexuality, ethnicity, religion, or politics.",
+    "Do not diagnose body shape, health condition, or eating disorder.",
+    "Do not make moral judgments about clothing choices.",
+    "Do not use absolute language such as 'flattering' or 'unflattering' as objective fact.",
+    "Do not frame body proportions as defects or problems.",
+    "Do not provide prescriptive beauty rankings.",
+    "Do not infer socioeconomic class from styling choices.",
+    "Do not state seasonal color analysis results as objective truth.",
+    "Do not claim intent unless visually supported by observable evidence."
+  ]
+}

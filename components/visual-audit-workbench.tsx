@@ -835,6 +835,10 @@ export function VisualAuditWorkbench() {
             <Link
               href="/"
               className="text-sm font-medium text-violet-600 transition hover:text-violet-700"
+              onClick={() => {
+                setFiles([]);
+                setFocusPrompt("");
+              }}
             >
               Back to overview
             </Link>
