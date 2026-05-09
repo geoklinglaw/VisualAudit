@@ -1,0 +1,67 @@
+[
+  {
+    "image_id": "c17e6e8a-e9ea-402a-9fc5-a1582a9f5402",
+    "user_id": "user_123",
+    "original_file_name": "photo_2026-05-09_00-06-57.jpg",
+    "storage_url": "/api/uploads/c17e6e8a-e9ea-402a-9fc5-a1582a9f5402-photo_2026-05-09_00-06-57.jpg",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 60825,
+    "width_px": 588,
+    "height_px": 1280,
+    "aspect_ratio": 0.4594,
+    "uploaded_at": 1778298092092,
+    "status": "uploaded"
+  },
+  {
+    "image_id": "b2037dcf-b469-4e7c-8f6e-22a0b5cb9b1f",
+    "user_id": "user_123",
+    "original_file_name": "photo_2026-05-09_00-06-57.jpg",
+    "storage_url": "/api/uploads/b2037dcf-b469-4e7c-8f6e-22a0b5cb9b1f-photo_2026-05-09_00-06-57.jpg",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 60825,
+    "width_px": 588,
+    "height_px": 1280,
+    "aspect_ratio": 0.4594,
+    "uploaded_at": 1778297391610,
+    "status": "uploaded"
+  },
+  {
+    "image_id": "dddb6c17-1348-4843-aeba-d80fb371bd15",
+    "user_id": "user_123",
+    "original_file_name": "photo_2026-05-09_00-06-57.jpg",
+    "storage_url": "/api/uploads/dddb6c17-1348-4843-aeba-d80fb371bd15-photo_2026-05-09_00-06-57.jpg",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 60825,
+    "width_px": 588,
+    "height_px": 1280,
+    "aspect_ratio": 0.4594,
+    "uploaded_at": 1778296309404,
+    "status": "uploaded"
+  },
+  {
+    "image_id": "f9e06d86-56d9-4588-b529-115e9b65b635",
+    "user_id": "user_123",
+    "original_file_name": "photo_2026-05-09_00-06-57.jpg",
+    "storage_url": "/uploads/f9e06d86-56d9-4588-b529-115e9b65b635-photo_2026-05-09_00-06-57.jpg",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 60825,
+    "width_px": 588,
+    "height_px": 1280,
+    "aspect_ratio": 0.4594,
+    "uploaded_at": 1778296017937,
+    "status": "uploaded"
+  },
+  {
+    "image_id": "img_123",
+    "user_id": "user_123",
+    "original_file_name": "outfit.jpg",
+    "storage_url": "https://...",
+    "file_type": "image/jpeg",
+    "file_size_bytes": 842131,
+    "width_px": 1080,
+    "height_px": 1440,
+    "aspect_ratio": 0.75,
+    "uploaded_at": 1710000000000,
+    "status": "uploaded"
+  }
+]
