@@ -1,0 +1,2129 @@
+[
+  {
+    "id": "monochromatic_vertical_continuity",
+    "category": "continuity",
+    "principle": "A single-color or tonal outfit spanning head to toe with minimal interruption creates an unbroken vertical visual path that may elongate the perceived silhouette.",
+    "observable_patterns": [
+      "continuous dark or light region from shoulder to hem",
+      "minimal tonal contrast at waist or hip transition",
+      "matching or near-matching top and bottom hues",
+      "no strong horizontal color break at any garment boundary"
+    ],
+    "possible_effects": [
+      "increases perceived vertical length of the figure",
+      "reduces visible segmentation between garment zones",
+      "creates a unified silhouette impression",
+      "may reduce perceived width relative to height"
+    ],
+    "limitations": [
+      "lighting conditions alter tonal relationships between garments",
+      "fabric texture differences may reintroduce visible segmentation despite color match",
+      "camera angle and cropping affect perceived elongation",
+      "accessories or footwear breaking the color path may interrupt continuity"
+    ],
+    "example_claims": [
+      "The outfit creates strong vertical continuity through matched tonal values.",
+      "No dominant horizontal color break is detected between garment zones.",
+      "The silhouette reads as a single uninterrupted vertical region."
+    ],
+    "style_tags": ["minimalist", "classic", "old_money", "scandinavian_minimalism"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "formal"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Trinny and Susannah body proportion framework", "Fashion silhouette theory"]
+  },
+  {
+    "id": "horizontal_segmentation_waist",
+    "category": "segmentation",
+    "principle": "A strong tonal or structural contrast at the waist zone visually divides the figure into upper and lower segments, anchoring the eye at the waist boundary.",
+    "observable_patterns": [
+      "high contrast between top and bottom garment colors at waist",
+      "belt or waistband with distinct color difference from surrounding fabric",
+      "tucked-in top creating a visible fabric edge at waist",
+      "color block boundary coinciding with natural or apparent waist zone"
+    ],
+    "possible_effects": [
+      "draws focal attention to the waist region",
+      "creates visible horizontal division of the silhouette",
+      "may shorten the perceived vertical length of each segment",
+      "anchors perceived proportional relationship between upper and lower body"
+    ],
+    "limitations": [
+      "waist zone visibility depends on garment fit and tucking",
+      "loose or untucked layers may obscure waist boundary",
+      "pose and posture affect where the apparent waist falls",
+      "wide-angle distortion may misplace apparent waist position"
+    ],
+    "example_claims": [
+      "A high-contrast boundary is visible at the waist, creating horizontal segmentation.",
+      "The silhouette appears divided into two distinct vertical segments.",
+      "Waist emphasis is created by a visible tonal contrast at the midsection."
+    ],
+    "style_tags": ["classic", "romantic", "preppy"],
+    "occasion_tags": ["business_casual", "smart_casual", "casual"],
+    "source_refs": ["Trinny and Susannah body shape framework", "Tim Gunn - A Guide to Quality Taste and Style", "Kibbe silhouette concepts"]
+  },
+  {
+    "id": "shoulder_width_silhouette_balance",
+    "category": "silhouette",
+    "principle": "The apparent width of the shoulder line relative to the hip line determines whether the overall silhouette reads as balanced, top-heavy, or bottom-heavy.",
+    "observable_patterns": [
+      "padded or structured shoulder seams extending beyond natural shoulder edge",
+      "wide lapels or horizontal collar elements broadening the shoulder visual",
+      "A-line or flared lower garment increasing hip/hem width",
+      "narrow or draped shoulder line with volume concentrated lower",
+      "shoulder seam sitting on or near the crest of the shoulder"
+    ],
+    "possible_effects": [
+      "broad shoulder line may increase perceived upper body visual weight",
+      "narrow shoulder line relative to wider lower garment may suggest bottom-heavy silhouette",
+      "matched shoulder and hip width may create an hourglass or rectangular silhouette impression",
+      "structured shoulders suggest tailored or formal visual register"
+    ],
+    "limitations": [
+      "camera perspective may exaggerate or reduce apparent shoulder width",
+      "pose angle affects shoulder-to-hip ratio reading",
+      "layering above or below may mask structural shoulder line",
+      "fabric stiffness affects how far the shoulder silhouette extends"
+    ],
+    "example_claims": [
+      "Structured shoulder line appears wider than the lower garment, suggesting a top-heavy silhouette.",
+      "The flared lower garment creates greater visual width at the hem than at the shoulder.",
+      "Shoulder seam placement appears at or beyond the natural shoulder crest."
+    ],
+    "style_tags": ["classic", "preppy", "edgy", "utilitarian", "avant_garde"],
+    "occasion_tags": ["business_formal", "formal", "smart_casual"],
+    "source_refs": ["Kibbe silhouette line concepts", "Fashion silhouette theory", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "vertical_line_elongation",
+    "category": "line_direction",
+    "principle": "Vertical design lines—including seams, plackets, stripes, buttons, or garment edges—running parallel to the body axis may increase perceived vertical length within that zone.",
+    "observable_patterns": [
+      "vertical seam lines visible on garment surface",
+      "vertical stripe pattern on fabric",
+      "long row of buttons or zipper running top to bottom",
+      "open layering piece creating two parallel vertical edges",
+      "V-neck or deep neckline creating a downward-pointing angle"
+    ],
+    "possible_effects": [
+      "may increase perceived vertical length in the garment zone",
+      "reduces horizontal visual weight in stripe-bearing zone",
+      "creates directional eye movement downward or upward along garment",
+      "V-neck angle draws eye inward and downward, lengthening neck and chest zone"
+    ],
+    "limitations": [
+      "stripe width affects whether elongation or width perception dominates",
+      "print scale and spacing relative to figure scale alters perception",
+      "competing horizontal elements may cancel vertical line effect",
+      "garment length determines extent of vertical line travel"
+    ],
+    "example_claims": [
+      "Vertical seam lines are visible running through the torso zone.",
+      "A V-neck creates a downward-pointing visual line from collar to chest.",
+      "The open cardigan creates two parallel vertical edges framing the front."
+    ],
+    "style_tags": ["classic", "minimalist", "preppy", "utilitarian"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Fashion silhouette theory", "Tim Gunn - A Guide to Quality Taste and Style", "General visual composition theory"]
+  },
+  {
+    "id": "horizontal_line_width_perception",
+    "category": "line_direction",
+    "principle": "Horizontal design elements—stripes, seams, hems, wide belts, color blocks—may increase perceived width in the zones where they appear.",
+    "observable_patterns": [
+      "horizontal stripe pattern on fabric",
+      "wide horizontal belt or waistband",
+      "boat neck or horizontal collar line",
+      "color block with horizontal boundary across garment",
+      "horizontal pocket placement at hip or chest"
+    ],
+    "possible_effects": [
+      "may increase perceived horizontal width in the zone containing the horizontal element",
+      "anchors visual attention at the horizontal element boundary",
+      "can reduce apparent vertical length by segmenting the region",
+      "boat neckline may broaden the apparent shoulder span"
+    ],
+    "limitations": [
+      "stripe scale and spacing interact with figure scale",
+      "pose and camera angle affect how horizontal reads versus diagonal",
+      "multiple competing horizontal elements may diffuse the width effect",
+      "tight or fitted garments diminish the width-adding effect of horizontal lines"
+    ],
+    "example_claims": [
+      "A horizontal stripe pattern is present in the upper torso zone.",
+      "The wide belt creates a prominent horizontal boundary at the waist.",
+      "The boat neckline creates a horizontal visual line at the shoulder level."
+    ],
+    "style_tags": ["classic", "preppy", "bohemian", "streetwear"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["Fashion silhouette theory", "General visual perception theory", "Trinny and Susannah framework"]
+  },
+  {
+    "id": "fit_first_silhouette_clarity",
+    "category": "silhouette",
+    "principle": "Garments with fit aligned close to the body surface produce cleaner, more legible silhouette edges; garments with excess fabric relative to the body may obscure the underlying silhouette.",
+    "observable_patterns": [
+      "garment fabric lies flat against body with minimal excess",
+      "shoulder seam sits at the shoulder crest without overhang",
+      "trouser break is minimal or controlled at the shoe",
+      "sleeve length ends at the wrist without bunching",
+      "no pulling or tension lines visible across fabric"
+    ],
+    "possible_effects": [
+      "produces a clean, legible outer silhouette edge",
+      "reduces visual noise from excess fabric folds",
+      "may project a more intentional or structured appearance",
+      "allows garment design lines to read as intended"
+    ],
+    "limitations": [
+      "intentional oversize silhouettes follow different fit logic",
+      "fabric weight affects how closely garment hugs the body even when sized correctly",
+      "lighting and shadow can create apparent pulling where none exists",
+      "pose and movement alter how fit appears in static image"
+    ],
+    "example_claims": [
+      "Shoulder seam appears aligned at or near the shoulder crest.",
+      "No visible tension or pulling lines are detected across the torso fabric.",
+      "Garment fabric appears to follow body contours with minimal excess drape."
+    ],
+    "style_tags": ["classic", "minimalist", "preppy", "old_money"],
+    "occasion_tags": ["business_formal", "formal", "business_casual", "smart_casual"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Tailoring terminology standards", "Tan France Queer Eye styling principles"]
+  },
+  {
+    "id": "proportion_top_bottom_ratio",
+    "category": "proportion",
+    "principle": "The visual length ratio of the upper garment zone to the lower garment zone influences whether the overall proportional relationship reads as balanced, elongated below, or elongated above.",
+    "observable_patterns": [
+      "cropped top creating a short upper zone with longer lower garment",
+      "long tunic or oversized top covering significant lower garment length",
+      "high-waisted lower garment raising the apparent waist-to-hem ratio",
+      "low-rise lower garment reducing visible lower zone above waistband",
+      "untucked shirt extending through the hip zone"
+    ],
+    "possible_effects": [
+      "cropped upper garment with high-waisted lower piece may increase perceived lower-body length",
+      "long upper garment may shorten perceived lower-body zone",
+      "high-waisted silhouette may raise apparent waist position",
+      "low-rise garment combined with short top creates a proportional midpoint shift"
+    ],
+    "limitations": [
+      "actual garment boundary may not be visible when layering obscures it",
+      "pose and hip tilt affect where apparent waistline falls",
+      "camera height and angle distort perceived top-to-bottom ratio",
+      "footwear height alters perceived lower-zone length"
+    ],
+    "example_claims": [
+      "The cropped upper garment creates a visually shorter upper zone relative to the lower garment.",
+      "The high-waisted trouser raises the apparent waist position in the silhouette.",
+      "The untucked shirt extends into the hip zone, shortening visible lower garment length."
+    ],
+    "style_tags": ["classic", "streetwear", "bohemian", "minimalist"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["Trinny and Susannah proportion framework", "Fashion proportion theory", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "third_rule_garment_length",
+    "category": "proportion",
+    "principle": "Garment hemlines that terminate near visual thirds of the body—at the hip, mid-thigh, knee, or ankle—interact with perceived proportional divisions in different ways than hemlines falling between these zones.",
+    "observable_patterns": [
+      "jacket hem ending at the hip crest",
+      "skirt or short hem falling at mid-thigh",
+      "midi hemline landing at or near the knee",
+      "maxi hem reaching the ankle or floor",
+      "coat hem terminating at mid-calf"
+    ],
+    "possible_effects": [
+      "hip-length jacket may visually anchor the waist-to-hip zone",
+      "mid-thigh hem exposes significant leg length below",
+      "knee hemline creates a perceived division at a visual midpoint",
+      "floor-length garments create maximal vertical continuity in the lower zone",
+      "mid-calf hem may create a horizontal anchor between knee and ankle"
+    ],
+    "limitations": [
+      "exact hemline position relative to body varies with garment size and individual proportions",
+      "footwear choice alters perception of exposed leg length below hem",
+      "cropping in image may prevent accurate hemline assessment",
+      "fabric weight affects how the hem falls and its apparent position"
+    ],
+    "example_claims": [
+      "The jacket hem appears to terminate near the hip zone.",
+      "The skirt hem falls above the knee, exposing the upper leg zone.",
+      "The coat hem appears to end at approximately mid-calf length."
+    ],
+    "style_tags": ["classic", "minimalist", "bohemian", "romantic", "preppy"],
+    "occasion_tags": ["formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Fashion proportion theory", "Tim Gunn - A Guide to Quality Taste and Style", "Trinny and Susannah framework"]
+  },
+  {
+    "id": "oversized_silhouette_volume_distribution",
+    "category": "silhouette",
+    "principle": "Deliberately oversized garments concentrate visual volume in a zone beyond the body's surface, shifting the silhouette edge outward from the body. Volume placement—upper or lower—affects which zone reads as dominant.",
+    "observable_patterns": [
+      "significant excess fabric visible beyond body edge in torso or sleeve zones",
+      "boxy or square outer silhouette with shoulder seam well below shoulder crest",
+      "wide-leg or voluminous lower garment with fabric extending well beyond leg edge",
+      "oversized shoulder creating an angular, shelf-like silhouette edge",
+      "billowing fabric visible in movement even in static image"
+    ],
+    "possible_effects": [
+      "increases perceived visual mass in the oversized zone",
+      "creates a geometric or angular silhouette impression",
+      "may reduce visibility of underlying body silhouette",
+      "volume concentrated in one zone may create visual counterbalance to another"
+    ],
+    "limitations": [
+      "intentional oversized styling is context-dependent and culturally coded",
+      "fabric stiffness vs drape alters how oversized reads in image",
+      "camera angle affects how much excess volume is visible",
+      "layering may obscure whether a silhouette is intentionally or accidentally oversized"
+    ],
+    "example_claims": [
+      "Significant excess fabric is visible in the shoulder and sleeve zone, creating an oversized silhouette.",
+      "The boxy outer silhouette edge extends substantially beyond the torso.",
+      "Volume appears concentrated in the lower garment, with a narrower upper zone."
+    ],
+    "style_tags": ["streetwear", "avant_garde", "minimalist", "utilitarian"],
+    "occasion_tags": ["casual", "streetwear", "smart_casual"],
+    "source_refs": ["Kibbe silhouette line concepts", "Fashion silhouette theory", "Contemporary streetwear styling references"]
+  },
+  {
+    "id": "layering_continuity_disruption",
+    "category": "continuity",
+    "principle": "Layering pieces introduce additional garment edges and hemlines into the visual field. Where layers align in color or tone, continuity is preserved; where they contrast, they create new segmentation or focal points.",
+    "observable_patterns": [
+      "outer layer in a contrasting color to inner garment",
+      "layered hems at different lengths creating visible stacking",
+      "matching tonal layers creating a unified outer silhouette",
+      "open outer layer revealing inner layer along vertical edges",
+      "collar or lapel of inner garment visible above outer layer"
+    ],
+    "possible_effects": [
+      "contrasting layer adds a new segmentation boundary or focal point",
+      "matching tonal layers preserve overall silhouette continuity",
+      "visible inner collar or lapel adds a layering detail at the neckline zone",
+      "open outer layer creates two additional vertical lines framing the inner garment"
+    ],
+    "limitations": [
+      "complex layering may create visual noise that resists simple pattern classification",
+      "partial visibility of inner layers depends on image crop and pose",
+      "fabric texture differences between layers may be invisible in some lighting",
+      "movement during capture may obscure layer relationships"
+    ],
+    "example_claims": [
+      "The outer layer contrasts in color with the inner garment, creating a visible layering boundary.",
+      "Matching tonal values between layers preserve vertical continuity.",
+      "The open outer layer creates two visible vertical edges framing the inner garment."
+    ],
+    "style_tags": ["minimalist", "classic", "streetwear", "preppy", "utilitarian"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Capsule wardrobe theory", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "shoe_pant_continuity",
+    "category": "continuity",
+    "principle": "When footwear and lower garment share a close tonal relationship, the lower-body vertical zone appears less interrupted at the hemline, potentially increasing perceived leg length.",
+    "observable_patterns": [
+      "dark trousers paired with dark shoes of similar or identical hue",
+      "light-colored lower garment with light or skin-tone footwear",
+      "monochromatic lower body styling from waist to foot",
+      "no strong tonal contrast visible at the hem-to-shoe transition"
+    ],
+    "possible_effects": [
+      "may increase perceived vertical length of the lower body zone",
+      "reduces visual interruption at the trouser break or hem",
+      "may allow the silhouette to read as continuous through the lower zone",
+      "shoe becomes less of a focal point when tonally matched"
+    ],
+    "limitations": [
+      "requires both footwear and lower garment to be visible in the frame",
+      "lighting may alter apparent shoe color relative to garment",
+      "very different fabrics at matched color may still create visible contrast through texture",
+      "sock color visible at the hem gap may reintroduce segmentation"
+    ],
+    "example_claims": [
+      "Footwear and lower garment share a close tonal value, reducing visible hem-to-shoe contrast.",
+      "The lower body zone appears continuous through matched shoe and trouser tones.",
+      "No strong tonal break is detected at the hem-to-shoe transition."
+    ],
+    "style_tags": ["classic", "minimalist", "old_money", "preppy"],
+    "occasion_tags": ["business_formal", "formal", "smart_casual", "business_casual"],
+    "source_refs": ["Tan France Queer Eye principles", "Tim Gunn - A Guide to Quality Taste and Style", "Fashion proportion theory"]
+  },
+  {
+    "id": "neckline_focal_geometry",
+    "category": "focal_point",
+    "principle": "Neckline shape and depth create a geometric frame around the face and neck zone that directs visual attention inward or outward, upward or downward.",
+    "observable_patterns": [
+      "deep V-neck creating a downward-pointing triangle",
+      "crew or round neck framing the lower face zone",
+      "square neckline creating horizontal and vertical edges at the collarbone",
+      "off-shoulder or wide neckline emphasizing the horizontal shoulder span",
+      "turtleneck or high neck reducing visible neck length"
+    ],
+    "possible_effects": [
+      "V-neck draws the eye downward toward the chest, may elongate the neck zone visually",
+      "crew neck frames the face with a circular border",
+      "square neck distributes attention horizontally at the collar region",
+      "off-shoulder neckline creates a strong horizontal focal element",
+      "turtleneck reduces visible neck, raising the collar frame toward the chin"
+    ],
+    "limitations": [
+      "hair length and volume may partially obscure neckline geometry",
+      "accessories at the neckline compete with or reinforce the neckline focal geometry",
+      "image crop may cut off the neckline zone",
+      "face direction and chin angle affect how neckline geometry interacts with face framing"
+    ],
+    "example_claims": [
+      "The V-neckline creates a downward-pointing triangular focal element at the chest.",
+      "The square neckline creates a horizontal edge at the collarbone zone.",
+      "The turtleneck reduces visible neck length by raising the collar frame."
+    ],
+    "style_tags": ["classic", "romantic", "minimalist", "preppy", "edgy"],
+    "occasion_tags": ["formal", "business_formal", "smart_casual", "casual"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Fashion silhouette theory", "General visual composition theory"]
+  },
+  {
+    "id": "waist_definition_structure",
+    "category": "proportion",
+    "principle": "Visible waist definition—through fit, cinching, belting, or seam placement—creates a narrowing at the midsection that anchors the perceived proportional relationship between upper and lower body zones.",
+    "observable_patterns": [
+      "visible narrowing of fabric at the midsection relative to shoulder and hip zones",
+      "belt or cinching element at or near the natural waist",
+      "seaming or darting creating an inward curve at the waist region",
+      "fabric appears to taper or gather inward at the midsection"
+    ],
+    "possible_effects": [
+      "may create a visible waist curve in the outer silhouette",
+      "anchors a proportional relationship between upper and lower body visual masses",
+      "creates a reference point for garment-to-garment proportion reading",
+      "belted waist may create a horizontal focal element at the midsection"
+    ],
+    "limitations": [
+      "loose or untucked garments may obscure any underlying waist shape",
+      "pose and body angle affect visibility of waist narrowing",
+      "garment structure and fabric stiffness may override waist shaping",
+      "image resolution may prevent detection of subtle seaming or darting"
+    ],
+    "example_claims": [
+      "A visible narrowing at the midsection suggests waist definition in the silhouette.",
+      "A belt creates a horizontal focal element at the apparent waist zone.",
+      "Fabric appears to taper inward at the midsection through seaming or darting."
+    ],
+    "style_tags": ["classic", "romantic", "preppy", "bohemian"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual", "formal"],
+    "source_refs": ["Trinny and Susannah framework", "Tim Gunn - A Guide to Quality Taste and Style", "Kibbe silhouette concepts"]
+  },
+  {
+    "id": "hem_width_silhouette_base",
+    "category": "silhouette",
+    "principle": "The width of the garment at its lowest visible hem determines the base geometry of the silhouette. Wide hems create A-line or triangular bases; narrow hems create column-like bases.",
+    "observable_patterns": [
+      "flared or A-line skirt with hemline substantially wider than waist zone",
+      "straight-cut trouser with consistent width from hip to hem",
+      "tapered trouser narrowing toward the ankle",
+      "wide-leg trouser maintaining or increasing width through the hem",
+      "pencil skirt maintaining narrow width through hemline"
+    ],
+    "possible_effects": [
+      "A-line hem creates a triangular silhouette with wide base",
+      "straight hem produces a columnar or rectangular lower silhouette",
+      "tapered hem narrows the base, creating an inverted taper geometry",
+      "wide-leg hem maintains horizontal mass through the lower zone"
+    ],
+    "limitations": [
+      "hem width is only fully readable when full-length image is available",
+      "pose with crossed legs or seated position may obscure true hem geometry",
+      "fabric movement at wide hems may vary hem width between image captures",
+      "shoe choice and stance width interact with apparent hem geometry"
+    ],
+    "example_claims": [
+      "The flared hemline creates an A-line silhouette base substantially wider than the waist zone.",
+      "The tapered trouser narrows toward the ankle, creating a pointed lower silhouette.",
+      "The pencil skirt maintains a narrow, columnar geometry through the hem."
+    ],
+    "style_tags": ["classic", "romantic", "minimalist", "preppy", "bohemian"],
+    "occasion_tags": ["formal", "business_formal", "smart_casual", "casual"],
+    "source_refs": ["Fashion silhouette theory", "Trinny and Susannah framework", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "visual_weight_distribution_zones",
+    "category": "proportion",
+    "principle": "Visual weight—determined by color saturation, pattern density, fabric texture, and structural volume—may be perceived as heavier or lighter in different garment zones, influencing overall balance reading.",
+    "observable_patterns": [
+      "dark or saturated color concentrated in the upper body garment",
+      "high-contrast pattern or print in the lower garment zone",
+      "structured or voluminous upper layer with minimal lower garment",
+      "plain upper garment with bold patterned lower garment",
+      "heavy texture or embellishment in one zone only"
+    ],
+    "possible_effects": [
+      "dark or saturated upper zone may appear visually heavier above the waist",
+      "bold pattern in lower zone concentrates visual weight below the waist",
+      "visual weight above and below in similar quantities may suggest overall balance",
+      "heavily textured zone may draw more attention than adjacent plain zones"
+    ],
+    "limitations": [
+      "visual weight perception is subjective and context-dependent",
+      "mixed patterns across zones complicate single-zone weight assessment",
+      "image quality and color accuracy affect saturation and pattern density readings",
+      "pose and lighting alter how texture and volume read as weight"
+    ],
+    "example_claims": [
+      "Dark saturated color is concentrated in the upper garment zone.",
+      "A bold patterned lower garment creates higher visual weight below the waist.",
+      "Structural volume in the upper garment creates greater apparent mass above the waist."
+    ],
+    "style_tags": ["classic", "bohemian", "maximalist", "streetwear"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["General visual perception theory", "Trinny and Susannah framework", "Fashion proportion theory"]
+  },
+  {
+    "id": "warm_cool_undertone_contrast",
+    "category": "color",
+    "principle": "Garment colors that share an undertone (warm or cool) with the wearer's visible skin undertone create tonal harmony; opposing undertones create visible contrast at the skin-garment boundary.",
+    "observable_patterns": [
+      "yellow, orange, or red-adjacent hues in garments near the face",
+      "blue, green, or purple-adjacent hues in garments near the face",
+      "visible skin at neckline, face, or hands for undertone reference",
+      "golden or peachy skin tones adjacent to garment colors at collar",
+      "pink or bluish skin tones adjacent to garment colors at collar"
+    ],
+    "possible_effects": [
+      "warm garment adjacent to warm undertone skin may create a harmonious transition",
+      "cool garment adjacent to cool undertone skin may appear to recede or blend",
+      "opposing undertone combinations may create heightened contrast at the skin-garment boundary",
+      "high undertone contrast near the face may increase or decrease perceived skin clarity in the image"
+    ],
+    "limitations": [
+      "undertone assessment from images is highly sensitive to lighting color temperature",
+      "camera white balance settings significantly alter apparent skin and garment undertones",
+      "image compression artifacts may distort color values",
+      "the 12-season system has no universal consensus on classification boundaries"
+    ],
+    "example_claims": [
+      "The garment at the neckline contains warm yellow-adjacent hues adjacent to the visible skin zone.",
+      "A cool blue-toned garment is observed adjacent to the visible skin at the collar.",
+      "Garment and visible skin hues appear to share a similar warm undertone register."
+    ],
+    "style_tags": ["classic", "minimalist", "romantic", "bohemian"],
+    "occasion_tags": ["formal", "business_formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["12-season color theory", "Seasonal palette frameworks", "General color theory"]
+  },
+  {
+    "id": "high_contrast_focal_emphasis",
+    "category": "contrast",
+    "principle": "A region of high tonal or chromatic contrast within an outfit draws disproportionate visual attention relative to surrounding lower-contrast zones.",
+    "observable_patterns": [
+      "bright or saturated accessory against a dark neutral garment",
+      "white shirt collar visible above a dark jacket",
+      "high-contrast patterned zone surrounded by solid-color zones",
+      "strongly contrasting belt against both upper and lower garment colors",
+      "bright shoes against dark trousers"
+    ],
+    "possible_effects": [
+      "high-contrast element becomes a focal point in the outfit composition",
+      "draws the eye to the zone where contrast is highest",
+      "may reduce attention to other outfit zones by comparison",
+      "a single high-contrast accessory can anchor the overall outfit narrative"
+    ],
+    "limitations": [
+      "multiple high-contrast elements may distribute attention and reduce individual focal emphasis",
+      "image exposure settings alter apparent contrast levels",
+      "background contrast may compete with outfit-internal contrast",
+      "small area of high contrast may be insufficient to dominate in a busy composition"
+    ],
+    "example_claims": [
+      "A high-contrast bright element is present against a dark background garment, likely creating a focal point.",
+      "The white collar creates strong tonal contrast against the dark jacket above it.",
+      "Saturated footwear creates a high-contrast element at the base of a low-contrast outfit."
+    ],
+    "style_tags": ["classic", "preppy", "maximalist", "streetwear", "edgy"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual", "formal"],
+    "source_refs": ["General visual composition theory", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "tonal_outfit_low_contrast",
+    "category": "contrast",
+    "principle": "Outfits constructed from colors of similar tonal value (all light, all medium, or all dark) produce a low-contrast ensemble where individual elements recede into a unified visual field.",
+    "observable_patterns": [
+      "multiple garments of similar lightness regardless of hue",
+      "all garments within 2-3 tonal steps on a lightness scale",
+      "no single element substantially lighter or darker than surrounding pieces",
+      "neutrals of similar tone combined without clear contrast element"
+    ],
+    "possible_effects": [
+      "creates a cohesive, unified visual impression",
+      "reduces visual fragmentation between garment pieces",
+      "may reduce the appearance of individual garments as separate elements",
+      "produces a quieter, more restrained visual register"
+    ],
+    "limitations": [
+      "tonal similarity is relative and depends on accurate color reproduction in image",
+      "hue differences may create perceived contrast even at similar lightness levels",
+      "texture differences between tonally matched pieces may reintroduce visible contrast",
+      "high ambient lighting may wash out tonal distinctions in the image"
+    ],
+    "example_claims": [
+      "All visible garments fall within a similar tonal range, creating a low-contrast ensemble.",
+      "No single element appears substantially lighter or darker than the surrounding pieces.",
+      "The outfit reads as a unified tonal field rather than as distinct contrasting elements."
+    ],
+    "style_tags": ["minimalist", "scandinavian_minimalism", "old_money", "classic"],
+    "occasion_tags": ["business_casual", "smart_casual", "business_formal", "formal"],
+    "source_refs": ["12-season color theory", "Tim Gunn - A Guide to Quality Taste and Style", "Scandinavian minimalism principles"]
+  },
+  {
+    "id": "complementary_color_tension",
+    "category": "color",
+    "principle": "Garment pieces in hues positioned opposite each other on the color wheel create chromatic tension that draws the eye to the boundary where they meet.",
+    "observable_patterns": [
+      "red and green garments appearing in the same outfit",
+      "blue and orange elements combined in one ensemble",
+      "purple and yellow combination in garment pieces",
+      "complementary hue combination in garment and accessory"
+    ],
+    "possible_effects": [
+      "creates vibrancy and visual tension at the color boundary",
+      "each color may appear more saturated when adjacent to its complement",
+      "the boundary zone becomes a focal element",
+      "can create a high-energy visual register depending on saturation levels"
+    ],
+    "limitations": [
+      "muted or desaturated complements produce much lower tension than saturated ones",
+      "exact hue complement relationships vary across color spaces",
+      "image processing and monitor calibration affect apparent complementary relationships",
+      "large area ratios between complements alter perceived balance significantly"
+    ],
+    "example_claims": [
+      "The garment combination includes hues that appear to sit in a complementary relationship on the color wheel.",
+      "Adjacent complementary hues create a visible chromatic boundary in the outfit.",
+      "Color tension is observable between the two dominant garment hues."
+    ],
+    "style_tags": ["maximalist", "bohemian", "streetwear", "avant_garde"],
+    "occasion_tags": ["casual", "smart_casual"],
+    "source_refs": ["General color theory", "Complementary color principles", "12-season palette frameworks"]
+  },
+  {
+    "id": "analogous_color_harmony",
+    "category": "color",
+    "principle": "Combining garment pieces in hues adjacent to each other on the color wheel produces tonal harmony with low chromatic tension.",
+    "observable_patterns": [
+      "outfit containing adjacent hues such as blue, blue-green, and green",
+      "warm family ensemble using orange, coral, and yellow",
+      "cool family ensemble combining navy, teal, and sage",
+      "adjacent hues across multiple garment pieces without a strongly contrasting color"
+    ],
+    "possible_effects": [
+      "creates a harmonious, cohesive color impression",
+      "reduces chromatic tension between garment pieces",
+      "ensemble may read as color-coordinated rather than color-contrasted",
+      "produces a sophisticated or restrained visual register depending on saturation"
+    ],
+    "limitations": [
+      "analogous range is not universally defined and varies across color theory traditions",
+      "image color accuracy depends on lighting and camera calibration",
+      "very different saturation levels between adjacent hues can reintroduce contrast",
+      "hue distance within the analogous range affects the degree of harmony"
+    ],
+    "example_claims": [
+      "Garment hues appear to fall within an adjacent range on the color wheel.",
+      "The ensemble reads as tonally harmonious with limited chromatic contrast.",
+      "Warm adjacent hues are observable across multiple garment pieces."
+    ],
+    "style_tags": ["classic", "romantic", "bohemian", "minimalist", "old_money"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual", "formal"],
+    "source_refs": ["General color theory", "12-season palette frameworks", "Analogous color harmony principles"]
+  },
+  {
+    "id": "neutral_palette_versatility",
+    "category": "color",
+    "principle": "Garments in neutral hues (black, white, navy, grey, camel, beige, olive) create low chromatic contrast ensembles with high compatibility across different styling contexts.",
+    "observable_patterns": [
+      "all garment pieces in achromatic or near-neutral hues",
+      "black and white combination with no chromatic accent",
+      "navy and camel combination",
+      "grey and white ensemble",
+      "head-to-toe earth tone combination"
+    ],
+    "possible_effects": [
+      "creates a visually restrained and cohesive ensemble",
+      "neutral pieces pair more easily with a wider range of other garments",
+      "reduces chromatic complexity, allowing silhouette and structure to dominate",
+      "may project a formal, classic, or understated register"
+    ],
+    "limitations": [
+      "neutral classification varies across color traditions",
+      "some so-called neutrals (camel, olive) carry warm or cool undertone signals",
+      "all-neutral ensembles may read as visually flat in low-contrast image conditions",
+      "neutral does not imply tonally matched, and tonal contrast within neutrals is still present"
+    ],
+    "example_claims": [
+      "All visible garment pieces fall within a neutral or achromatic hue range.",
+      "No chromatic accent color is visible in the outfit composition.",
+      "The ensemble reads as tonally restrained using neutrals throughout."
+    ],
+    "style_tags": ["minimalist", "classic", "old_money", "scandinavian_minimalism", "preppy"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "formal", "casual"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Capsule wardrobe theory", "12-season palette frameworks"]
+  },
+  {
+    "id": "accent_color_focal_placement",
+    "category": "focal_point",
+    "principle": "A single saturated or chromatic accent color introduced into an otherwise neutral or low-saturation ensemble creates a focal element at the location of the accent.",
+    "observable_patterns": [
+      "one saturated colored accessory against an otherwise neutral outfit",
+      "single colored shoe against monochromatic or neutral ensemble",
+      "bright handbag or bag element as only non-neutral in frame",
+      "colored belt or scarf as sole accent element",
+      "one colored garment piece surrounded by neutrals"
+    ],
+    "possible_effects": [
+      "accent becomes the dominant focal point in the outfit composition",
+      "draws the eye to the zone where the accent is placed",
+      "increases perceived sophistication of neutral base through controlled use of color",
+      "creates a narrative element in an otherwise understated ensemble"
+    ],
+    "limitations": [
+      "accent power depends on the degree of saturation contrast with surrounding elements",
+      "multiple accents reduce individual focal emphasis",
+      "ambient light and image saturation settings affect how an accent reads",
+      "small accents may not be visible or dominant in full-length image frames"
+    ],
+    "example_claims": [
+      "A single saturated accent element appears against an otherwise neutral outfit palette.",
+      "The colored accessory creates a focal point in the otherwise low-saturation ensemble.",
+      "Only one chromatic element is visible in the outfit composition, concentrating visual attention."
+    ],
+    "style_tags": ["classic", "minimalist", "old_money", "scandinavian_minimalism"],
+    "occasion_tags": ["business_casual", "smart_casual", "casual", "formal"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles", "General visual composition theory"]
+  },
+  {
+    "id": "saturation_contrast_outfit_energy",
+    "category": "color",
+    "principle": "The overall saturation level of an outfit—whether composed of bright, vivid hues versus muted, greyed hues—correlates with the perceived visual energy or quietness of the ensemble.",
+    "observable_patterns": [
+      "multiple highly saturated garment pieces visible in the outfit",
+      "all garments in heavily muted, greyed, or dusty tones",
+      "single vivid piece contrasting against heavily muted surrounding garments",
+      "consistent mid-saturation across all garment pieces"
+    ],
+    "possible_effects": [
+      "high saturation across multiple pieces may increase perceived visual energy",
+      "muted, dusty palette may produce a quieter, more restrained visual register",
+      "mixed saturation levels create visual tension between vivid and muted elements",
+      "consistent saturation level produces a harmonious if potentially monotone visual impression"
+    ],
+    "limitations": [
+      "saturation perception is highly sensitive to image exposure and processing",
+      "hue identity may be lost at very low saturation levels, making color classification unreliable",
+      "cultural associations of specific saturations vary widely",
+      "garment material reflectivity affects apparent saturation in image"
+    ],
+    "example_claims": [
+      "The visible garments appear in highly saturated hues, creating a high-energy color composition.",
+      "All garment pieces appear in muted, low-saturation tones.",
+      "Mixed saturation levels are observed across the outfit components."
+    ],
+    "style_tags": ["maximalist", "minimalist", "bohemian", "streetwear", "avant_garde"],
+    "occasion_tags": ["casual", "smart_casual", "streetwear", "athletic"],
+    "source_refs": ["12-season color theory", "General color theory", "Seasonal palette frameworks"]
+  },
+  {
+    "id": "seasonal_cool_palette_signals",
+    "category": "color",
+    "principle": "Garments with blue-toned, icy, or ash-toned hues correspond to the cool end of seasonal palette systems, producing specific chromatic qualities observable in the image.",
+    "observable_patterns": [
+      "icy pastels with blue or lavender undertone",
+      "true blue or blue-grey garment tones",
+      "ash-toned brown or grey without warm golden cast",
+      "cool red or burgundy without orange undertone",
+      "stark black and white contrast without warm cream"
+    ],
+    "possible_effects": [
+      "cool-toned palette creates a crisp, cool visual register",
+      "icy pastels at the face may contrast with warm skin undertones",
+      "deep cool tones may create sharper apparent contrast at skin boundaries",
+      "cool neutrals may recede visually relative to warm ones in similar lighting"
+    ],
+    "limitations": [
+      "cool vs warm palette assessment is highly vulnerable to lighting color temperature shifts",
+      "image compression and camera sensor characteristics distort hue accuracy",
+      "the 12-season system produces varying classifications across practitioners",
+      "individual undertone assessment from image alone is unreliable without controlled conditions"
+    ],
+    "example_claims": [
+      "The visible garment hues appear to fall within a cool or ash-toned palette range.",
+      "Blue or blue-adjacent undertones are observable in the garment colors.",
+      "No warm golden or yellow undertones are visible in the garment palette."
+    ],
+    "style_tags": ["minimalist", "classic", "scandinavian_minimalism", "preppy"],
+    "occasion_tags": ["business_formal", "formal", "business_casual", "smart_casual"],
+    "source_refs": ["12-season color theory", "Cool season palette frameworks", "General color theory"]
+  },
+  {
+    "id": "seasonal_warm_palette_signals",
+    "category": "color",
+    "principle": "Garments with golden, earthy, orange-adjacent, or warm-toned hues correspond to the warm end of seasonal palette systems, producing observable chromatic warmth in the image.",
+    "observable_patterns": [
+      "camel, rust, terracotta, or mustard garment tones",
+      "warm brown, warm green, or olive tones",
+      "cream or off-white with yellow or warm undertone",
+      "orange-red rather than blue-red hues",
+      "warm peach or coral tones"
+    ],
+    "possible_effects": [
+      "warm-toned palette creates a golden, earthy visual register",
+      "warm hues adjacent to warm undertone skin may create a harmonious skin-garment transition",
+      "earth tones may produce a grounded, autumnal visual impression",
+      "warm neutrals tend to recede less aggressively than cool neutrals in certain lighting"
+    ],
+    "limitations": [
+      "warm vs cool classification depends on accurate color rendering in the image",
+      "yellow-toned lighting can warm any garment regardless of its actual hue",
+      "warm colors appear to advance in visual space under neutral lighting, potentially increasing visual weight",
+      "the boundaries between warm and cool are not universally fixed in seasonal systems"
+    ],
+    "example_claims": [
+      "The visible garment hues appear to fall within a warm, earth-toned palette range.",
+      "Golden or orange-adjacent undertones are observable in the garment colors.",
+      "No cool blue or ash undertones are visible in the dominant garment palette."
+    ],
+    "style_tags": ["bohemian", "classic", "old_money", "utilitarian"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["12-season color theory", "Warm season palette frameworks", "General color theory"]
+  },
+  {
+    "id": "print_scale_proportion_relationship",
+    "category": "proportion",
+    "principle": "The scale of a print or pattern relative to the garment area and the wearer's apparent proportions affects whether the print reads as large or small, and how it interacts with perceived visual mass.",
+    "observable_patterns": [
+      "small repeat pattern on a large garment area",
+      "large-scale print on a small garment zone",
+      "print scale similar to or larger than visible body zone",
+      "micro print creating a near-solid visual texture from viewing distance",
+      "bold oversized print dominant in the frame"
+    ],
+    "possible_effects": [
+      "large print relative to garment area may increase apparent visual mass of that garment",
+      "small repeat pattern reads as texture rather than pattern at distance",
+      "oversized print may draw strong focal attention",
+      "micro print creates a textured solid rather than a pattern, reducing focal complexity"
+    ],
+    "limitations": [
+      "print scale-to-figure reading depends on image distance and resolution",
+      "image compression may obscure fine print details",
+      "print design complexity independently affects visual weight beyond simple scale",
+      "print placement within a garment panel affects which zones receive emphasis"
+    ],
+    "example_claims": [
+      "A large-scale print is visible across the upper garment zone, creating a dominant focal pattern.",
+      "The print appears as a fine texture rather than a readable pattern at the image resolution.",
+      "Print scale appears large relative to the visible garment area."
+    ],
+    "style_tags": ["bohemian", "maximalist", "preppy", "romantic", "streetwear"],
+    "occasion_tags": ["casual", "smart_casual", "business_casual"],
+    "source_refs": ["Fashion proportion theory", "General visual perception theory", "Trinny and Susannah framework"]
+  },
+  {
+    "id": "fabric_drape_silhouette_softness",
+    "category": "drape",
+    "principle": "Fabrics with high drape—such as silk, chiffon, viscose, or fluid jersey—fall away from the body, creating soft, curved silhouette edges that follow gravity rather than holding structural shape.",
+    "observable_patterns": [
+      "fabric folds falling vertically along the body with gravity",
+      "curved rather than angular hem edges",
+      "fabric visible to shift or pool at hemline",
+      "garment surface showing fluid curves rather than flat planes",
+      "multiple overlapping folds or bias drape visible"
+    ],
+    "possible_effects": [
+      "creates a soft, fluid silhouette edge that shifts with movement",
+      "reduces structural rigidity in the garment's outer contour",
+      "draping folds may create visual movement in a static image",
+      "high drape reduces visible crease lines compared to stiffer fabrics"
+    ],
+    "limitations": [
+      "drape behavior is affected by garment cut, not just fabric type",
+      "body position and pose alter drape direction significantly",
+      "fabric movement during capture may create unusual drape patterns",
+      "image resolution may not resolve fine drape folds"
+    ],
+    "example_claims": [
+      "The garment fabric falls in soft vertical folds consistent with high-drape material behavior.",
+      "The silhouette edge appears soft and curved rather than angular or stiff.",
+      "Fluid drape folds are visible across the skirt or garment body."
+    ],
+    "style_tags": ["romantic", "bohemian", "classic", "minimalist", "avant_garde"],
+    "occasion_tags": ["formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Fabric and fit fundamentals", "Fashion drape theory", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "fabric_stiffness_structure_projection",
+    "category": "structure",
+    "principle": "Fabrics with low drape—such as canvas, denim, tweed, structured wool, or crisp cotton—hold their shape away from the body, projecting a defined silhouette edge with visible form retention.",
+    "observable_patterns": [
+      "garment maintains angular or geometric edges at shoulders or hem",
+      "fabric surface appears flat with minimal fold variation",
+      "collar, lapel, or jacket front maintains a rigid position",
+      "structured waistband or waist region maintains visible shape",
+      "sleeves or trouser legs maintain consistent shape independent of body position"
+    ],
+    "possible_effects": [
+      "creates a structured, architectural silhouette impression",
+      "maintains garment design lines more visibly than drape-heavy fabrics",
+      "suggests formality or tailoring through visual rigidity",
+      "stiff fabric may resist body contour, reducing visible body-line definition"
+    ],
+    "limitations": [
+      "fabric stiffness cannot be definitively identified from visual cues alone",
+      "structured tailoring techniques can replicate stiffness with moderately drapey fabrics using interfacing",
+      "garment pressing and steaming affects apparent crispness in a still image",
+      "worn or washed stiff fabrics may lose visible structural rigidity"
+    ],
+    "example_claims": [
+      "The garment maintains a structured shape with angular edges consistent with a stiff fabric.",
+      "The collar and lapels appear rigid, holding their position without draping.",
+      "The trouser leg maintains a consistent silhouette shape through the image."
+    ],
+    "style_tags": ["classic", "preppy", "utilitarian", "edgy", "avant_garde"],
+    "occasion_tags": ["business_formal", "formal", "business_casual", "smart_casual"],
+    "source_refs": ["Fabric and fit fundamentals", "Tailoring terminology", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "tension_pulling_fit_signal",
+    "category": "fit",
+    "principle": "Tension lines or fabric pulling across a garment indicate that the garment is under stress, typically signaling that the garment is smaller than the body dimensions in that zone.",
+    "observable_patterns": [
+      "diagonal pulling lines visible across the chest or back",
+      "button gap visible at the shirt or jacket closure",
+      "fabric appearing stretched or distorted across a joint or curved body region",
+      "horizontal pulling lines across the thigh or hip zone",
+      "trouser seat pulling with visible fabric stress"
+    ],
+    "possible_effects": [
+      "suggests the garment is smaller than the body in the zone showing tension",
+      "may indicate fit mismatch between garment size and body dimension",
+      "can create distortion of intended design lines in the tension zone",
+      "may draw visual attention to the area of tension through visible fabric stress"
+    ],
+    "limitations": [
+      "some garments are intentionally stretch-fit and tension lines may be expected",
+      "pose and movement create temporary tension that may not reflect static fit",
+      "reflective or glossy fabrics may create apparent tension lines from sheen rather than stress",
+      "compressed or cropped images may not resolve fine tension line detail"
+    ],
+    "example_claims": [
+      "Diagonal pulling lines are visible across the chest zone, suggesting potential fit tension.",
+      "A button gap is visible at the jacket closure, indicating stress at that point.",
+      "Horizontal tension lines are observable across the hip zone."
+    ],
+    "style_tags": [],
+    "occasion_tags": [],
+    "source_refs": ["Tailoring terminology", "Fit indicators", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "excess_fabric_fit_signal",
+    "category": "fit",
+    "principle": "Excess fabric visible in a zone where the garment extends substantially beyond the body's surface indicates that the garment is larger than the body dimension in that zone—unless the design is intentionally oversized.",
+    "observable_patterns": [
+      "fabric bunching or pooling at the waist or hip area in a trouser",
+      "shirt or jacket hanging significantly away from the torso",
+      "sleeve length extending well beyond the wrist",
+      "trouser break with significant fabric stacking at the shoe",
+      "collar gaping away from the neck on a tailored garment"
+    ],
+    "possible_effects": [
+      "suggests a fit mismatch where garment is larger than body in that zone",
+      "excess fabric may obscure body silhouette and design lines",
+      "can create a looseness or shapelessness impression in non-oversized styling contexts",
+      "sleeve pooling or fabric stacking may read as unintentional if no oversized design cues are present"
+    ],
+    "limitations": [
+      "intentional oversized garments are a deliberate design choice and excess fabric is expected",
+      "fabric type affects how pooling or bunching reads—heavier fabrics fall differently",
+      "pose and arm position affect sleeve excess visibility",
+      "image cropping may prevent assessment of trouser break or shoe interaction"
+    ],
+    "example_claims": [
+      "Fabric appears to bunch or pool at the waist in the trouser zone, suggesting excess material.",
+      "The sleeve appears to extend significantly past the wrist, indicating potential oversized fit or size mismatch.",
+      "The collar gapes away from the neck, suggesting a fit mismatch at the collar zone."
+    ],
+    "style_tags": [],
+    "occasion_tags": [],
+    "source_refs": ["Tailoring terminology", "Fit indicators", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "shoulder_seam_placement_tailoring",
+    "category": "fit",
+    "principle": "The position of the shoulder seam relative to the shoulder crest is a key tailoring fit indicator. A seam at or near the shoulder crest indicates an approximate fit; seams significantly inward or outward suggest size mismatch or intentional design.",
+    "observable_patterns": [
+      "shoulder seam visually aligned at the highest point of the shoulder",
+      "seam extending past the shoulder crest onto the upper arm",
+      "seam falling significantly inward toward the neck on a non-drop-shoulder garment",
+      "seam creates a shelf or overhang past the shoulder point"
+    ],
+    "possible_effects": [
+      "seam at crest suggests the garment shoulder width is aligned with the wearer",
+      "seam past the crest onto the arm suggests the garment is wider than the wearer at the shoulder",
+      "dropped shoulder seams are a design feature creating a specific silhouette effect",
+      "seam inward of crest suggests garment is narrower than the wearer at the shoulder"
+    ],
+    "limitations": [
+      "shoulder crest position varies with pose, arm position, and clothing bulk",
+      "dropped shoulder is an intentional design in many contemporary garments",
+      "image angle may obscure the seam-to-crest relationship",
+      "layering may shift the apparent position of the outer shoulder seam"
+    ],
+    "example_claims": [
+      "The shoulder seam appears to align approximately with the shoulder crest.",
+      "The shoulder seam appears to extend past the crest onto the upper arm.",
+      "The shoulder seam appears inward of the shoulder crest on a structured jacket."
+    ],
+    "style_tags": ["classic", "preppy", "old_money"],
+    "occasion_tags": ["business_formal", "formal", "business_casual"],
+    "source_refs": ["Tailoring terminology", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "trouser_break_length_signal",
+    "category": "fit",
+    "principle": "The amount of trouser fabric that contacts or stacks on the shoe at the hem determines the trouser break—a tailoring measurement with a spectrum from no-break (full hem above shoe) to full break (fabric stacking significantly).",
+    "observable_patterns": [
+      "hem falls above the shoe with no fabric contact at the shoe",
+      "hem grazes the shoe top with minimal fabric fold",
+      "hem creates a single fold at the shoe contact point",
+      "fabric stacks or bunches above the shoe in multiple folds"
+    ],
+    "possible_effects": [
+      "no-break creates a cleaner, more contemporary or cropped silhouette at the hem",
+      "quarter or half break suggests a traditional tailored finish",
+      "full break creates a heavier, pooling hem impression",
+      "excess break may read as accidental length or size mismatch in formal contexts"
+    ],
+    "limitations": [
+      "full-length image required to assess trouser break",
+      "shoe heel height affects apparent break at the same trouser length",
+      "trouser break conventions vary by regional tailoring tradition and era",
+      "image perspective and angle distort apparent hem-to-shoe relationship"
+    ],
+    "example_claims": [
+      "The trouser hem appears to sit above the shoe with no visible break.",
+      "A single fold is visible at the trouser hem where it meets the shoe, suggesting a half-break.",
+      "Significant fabric stacking is visible at the hem, indicating a full or excess break."
+    ],
+    "style_tags": ["classic", "preppy", "old_money", "minimalist"],
+    "occasion_tags": ["business_formal", "formal", "smart_casual", "business_casual"],
+    "source_refs": ["Tailoring terminology", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "texture_contrast_surface_interest",
+    "category": "texture",
+    "principle": "Combining garment pieces with contrasting surface textures—such as smooth and rough, matte and shiny, ribbed and flat—creates visible surface variation that may add visual interest without chromatic contrast.",
+    "observable_patterns": [
+      "shiny or reflective fabric adjacent to matte fabric",
+      "ribbed texture garment alongside smooth knit or woven",
+      "coarse weave such as tweed adjacent to smooth cotton",
+      "embellished or embroidered surface near a plain fabric",
+      "suede or velvet adjacent to smooth leather or synthetic"
+    ],
+    "possible_effects": [
+      "texture contrast creates visual differentiation between garment pieces without color contrast",
+      "reflective fabric adjacent to matte may shift perceived visual weight",
+      "texture interaction adds dimensional visual complexity to an otherwise simple palette",
+      "heavy texture in one zone may increase perceived visual weight of that zone"
+    ],
+    "limitations": [
+      "fine texture differences may not be visible in compressed or low-resolution images",
+      "lighting direction strongly affects how texture reads in image",
+      "distant or small garment zones may not reveal texture contrast clearly",
+      "some fabrics appear different in texture under different lighting conditions"
+    ],
+    "example_claims": [
+      "A shiny and matte fabric pairing creates visible surface texture contrast.",
+      "Ribbed and smooth fabric textures appear in adjacent garment zones.",
+      "Heavy-weave and smooth fabrics create texture differentiation in the outfit."
+    ],
+    "style_tags": ["classic", "minimalist", "edgy", "avant_garde", "old_money"],
+    "occasion_tags": ["business_casual", "smart_casual", "casual", "formal"],
+    "source_refs": ["Fabric and fit fundamentals", "Tim Gunn - A Guide to Quality Taste and Style", "Fashion texture theory"]
+  },
+  {
+    "id": "tonal_texture_monochrome_depth",
+    "category": "texture",
+    "principle": "Combining multiple textures within a single tonal range creates a tonally unified but texturally complex ensemble, adding visual depth without chromatic disruption.",
+    "observable_patterns": [
+      "all-black outfit with multiple fabric textures visible",
+      "all-white or cream garments with differing surface finishes",
+      "all-grey ensemble with varied surface types across garments",
+      "monochromatic neutral outfit with matte, shiny, and matte elements"
+    ],
+    "possible_effects": [
+      "maintains tonal continuity while adding visual complexity through texture",
+      "creates an impression of considered layering and material awareness",
+      "texture variation replaces color contrast as the primary source of visual differentiation",
+      "may produce a sophisticated or editorial visual register"
+    ],
+    "limitations": [
+      "subtle texture differences may not be visible in still photography at standard resolution",
+      "image lighting direction must be favorable to reveal texture variation",
+      "single-texture monochrome ensembles will appear visually flat by contrast",
+      "color accuracy must be sufficient to confirm tonal similarity across garment pieces"
+    ],
+    "example_claims": [
+      "An all-black ensemble with visible texture variation across garment pieces is observed.",
+      "Multiple fabric surfaces in a single tonal range create tonal unity with textural complexity.",
+      "Matte and reflective surfaces appear in the same tonal range across garment pieces."
+    ],
+    "style_tags": ["minimalist", "edgy", "avant_garde", "scandinavian_minimalism"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual", "formal"],
+    "source_refs": ["Fashion texture theory", "Minimalist styling principles", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "pattern_mixing_scale_rule",
+    "category": "texture",
+    "principle": "When multiple patterns appear in one outfit, significant scale differentiation between patterns may reduce visual conflict relative to same-scale patterns combining.",
+    "observable_patterns": [
+      "large floral print and small geometric pattern in same outfit",
+      "fine stripe combined with a bold graphic print",
+      "micro houndstooth combined with a large plaid",
+      "same-scale stripes and checks in one ensemble"
+    ],
+    "possible_effects": [
+      "different-scale patterns may create visual differentiation that reads as intentional mixing",
+      "same-scale pattern mixing may produce visual competition and complexity",
+      "scale differentiation allows each pattern to occupy a perceptually distinct zone",
+      "fine pattern at small area scale reads as texture, reducing conflict with larger pattern"
+    ],
+    "limitations": [
+      "pattern mixing perception is highly subjective and culturally variable",
+      "color harmony between patterns may override scale conflict in perception",
+      "image resolution may prevent accurate pattern scale comparison",
+      "print placement and garment area interaction complicate direct scale comparison"
+    ],
+    "example_claims": [
+      "Two patterns of significantly different scale are visible in the same outfit.",
+      "Same-scale patterns appear in adjacent garment zones, creating potential visual competition.",
+      "A micro pattern reads as texture rather than print, reducing conflict with a larger pattern."
+    ],
+    "style_tags": ["bohemian", "maximalist", "preppy", "avant_garde"],
+    "occasion_tags": ["casual", "smart_casual"],
+    "source_refs": ["Fashion print and pattern theory", "Tan France Queer Eye principles", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "formal_dress_code_visual_indicators",
+    "category": "occasion",
+    "principle": "Black tie and formal dress codes are associated with specific observable garment and accessory features that signal alignment with the formal register.",
+    "observable_patterns": [
+      "tuxedo jacket with satin lapel visible",
+      "full-length gown visible in the lower body zone",
+      "white dress shirt with formal placket at chest",
+      "bow tie visible at collar zone",
+      "patent or highly polished black shoe visible",
+      "floor-length hem on women's formalwear"
+    ],
+    "possible_effects": [
+      "cluster of formal visual indicators suggests alignment with black tie or formal dress code",
+      "individual formal elements in otherwise casual context create visible code mismatch",
+      "matching formal elements across garments signals intentional formal styling"
+    ],
+    "limitations": [
+      "modern dress codes are increasingly hybrid and individual formal elements may appear in casual contexts intentionally",
+      "accessories may be partially obscured or out of frame",
+      "garment type classification requires sufficient image resolution and framing",
+      "regional and cultural variation in formal dress conventions affects interpretation"
+    ],
+    "example_claims": [
+      "A satin-lapel tuxedo jacket is visible, consistent with black tie dress code indicators.",
+      "A floor-length gown is visible in the lower body zone, consistent with formal dress code indicators.",
+      "Multiple formal register indicators are present across the visible garment combination."
+    ],
+    "style_tags": ["classic", "old_money"],
+    "occasion_tags": ["black_tie", "formal"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style", "Formal dress code standards"]
+  },
+  {
+    "id": "business_formal_visual_indicators",
+    "category": "occasion",
+    "principle": "Business formal attire is associated with observable garment features indicating a structured, professional register with conservative silhouette and neutral palette.",
+    "observable_patterns": [
+      "structured blazer or suit jacket with visible lapel",
+      "collared dress shirt visible at the neckline",
+      "matched suit trouser or pencil skirt in a neutral or conservative color",
+      "leather or polished shoe visible",
+      "limited visible pattern or print—mostly solids or subtle textures",
+      "tie visible at collar for male-presenting individuals"
+    ],
+    "possible_effects": [
+      "cluster of business formal indicators suggests alignment with business formal dress code",
+      "structured silhouette with neutral palette reinforces the professional visual register",
+      "absence of casual elements such as sneakers, denim, or visible athleisure suggests higher formality"
+    ],
+    "limitations": [
+      "business formal conventions vary significantly by industry and geography",
+      "contemporary workplaces have shifted norms substantially—what reads as business formal is contextual",
+      "suiting may appear in non-business styling contexts",
+      "image crop may prevent full assessment of suit components"
+    ],
+    "example_claims": [
+      "A structured blazer or suit jacket is visible, consistent with business formal indicators.",
+      "A collared dress shirt is visible at the neckline within a suit combination.",
+      "The ensemble appears composed of matched suit components in a neutral palette."
+    ],
+    "style_tags": ["classic", "preppy", "old_money"],
+    "occasion_tags": ["business_formal"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "business_casual_visual_indicators",
+    "category": "occasion",
+    "principle": "Business casual attire occupies the zone between business formal and smart casual, typically involving structured separates without a full matched suit, and excluding the most casual elements.",
+    "observable_patterns": [
+      "blazer worn without a matched trouser or skirt from the same suit",
+      "chino or tailored trouser visible as a lower garment",
+      "collared shirt or neat blouse without a tie",
+      "loafer, oxford, or clean leather or suede shoe visible",
+      "minimal visible pattern or limited small-scale print",
+      "no denim, sneakers, hoodie, or visible athletic garment"
+    ],
+    "possible_effects": [
+      "combination of blazer and non-matched trouser creates a business casual visual register",
+      "absence of a full suit suggests less formality while structure from blazer maintains professionalism",
+      "clean footwear without athletic styling reinforces the business casual register"
+    ],
+    "limitations": [
+      "business casual is one of the most contested and contextually variable dress codes",
+      "industry-specific norms mean tech business casual may differ from finance business casual",
+      "the same individual elements may be combined to read as smart casual or business formal depending on other elements",
+      "accessories significantly modulate the register of otherwise boundary-zone garments"
+    ],
+    "example_claims": [
+      "A blazer is visible without a matched trouser, suggesting a business casual or smart casual register.",
+      "Tailored trousers and a collared shirt without a tie are visible, consistent with business casual indicators.",
+      "No denim or athletic garments are visible in the ensemble."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist"],
+    "occasion_tags": ["business_casual"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "smart_casual_visual_indicators",
+    "category": "occasion",
+    "principle": "Smart casual occupies the zone between business casual and casual, allowing deliberate casual elements such as quality knitwear, chinos, or clean sneakers while maintaining an intentional, put-together impression.",
+    "observable_patterns": [
+      "quality knitwear or crew-neck sweater as an upper garment",
+      "chino, tailored trouser, or dark slim denim as a lower garment",
+      "clean leather sneaker or loafer visible",
+      "no sportswear-derived elements or visible athleisure",
+      "intentional garment combination without suit structure"
+    ],
+    "possible_effects": [
+      "suggests an intentional casual-with-structure visual register",
+      "deliberately casual individual elements combined with structured pieces may suggest smart casual styling",
+      "clean sneakers in an otherwise structured ensemble shift the register toward contemporary smart casual"
+    ],
+    "limitations": [
+      "smart casual is highly culturally and contextually variable",
+      "the same garments may read differently depending on brand, fit, and combination",
+      "image context beyond garments—setting, body language—affects occasion reading but may not be visible",
+      "gender conventions in smart casual vary significantly"
+    ],
+    "example_claims": [
+      "A quality knitwear garment is visible with tailored trousers, consistent with smart casual indicators.",
+      "Clean leather sneakers appear within an otherwise structured ensemble.",
+      "Chino trousers and a collared shirt combination without formal jacket suggests a smart casual register."
+    ],
+    "style_tags": ["classic", "minimalist", "preppy", "scandinavian_minimalism"],
+    "occasion_tags": ["smart_casual"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tan France Queer Eye principles", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "casual_visual_indicators",
+    "category": "occasion",
+    "principle": "Casual attire includes a wide range of relaxed garment types prioritizing comfort and personal expression without a structured or dress code context.",
+    "observable_patterns": [
+      "t-shirt or casual knit as upper garment",
+      "jeans, casual cotton trouser, or shorts visible",
+      "sneakers, sandals, or casual footwear",
+      "presence of casual garment types such as hoodie or sweatshirt",
+      "visible garment washes or distressing in denim"
+    ],
+    "possible_effects": [
+      "casual garment combination signals a low-formality register",
+      "multiple relaxed garment elements reinforce a casual occasion suitability reading",
+      "absence of structured or formal garment components suggests casual context alignment"
+    ],
+    "limitations": [
+      "casual garments can be styled with intentional combinations that elevate the register",
+      "individual garment quality and fit interact with the casual reading",
+      "casualwear conventions vary widely by age group, geography, and culture",
+      "high-quality casual pieces may read differently than mass-market casual"
+    ],
+    "example_claims": [
+      "A t-shirt and jeans combination is visible, consistent with casual dress code indicators.",
+      "Casual sneakers and a hoodie are visible, suggesting a relaxed, low-formality register.",
+      "Multiple casual garment elements are present without structured or formal pieces."
+    ],
+    "style_tags": ["streetwear", "utilitarian", "minimalist"],
+    "occasion_tags": ["casual"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "streetwear_visual_indicators",
+    "category": "occasion",
+    "principle": "Streetwear is associated with observable garment features drawn from sportswear, urban culture, and youth fashion: visible logo or brand graphics, athletic footwear, oversized silhouettes, and specific garment types.",
+    "observable_patterns": [
+      "visible brand logo or graphic print on upper garment",
+      "athletic or performance sneaker visible as footwear",
+      "oversized or dropped-shoulder silhouette in upper garment",
+      "track pant, cargo pant, or basketball short visible",
+      "cap, beanie, or streetwear-associated headwear visible",
+      "hoodie or sweatshirt with visible graphic or branding"
+    ],
+    "possible_effects": [
+      "cluster of streetwear indicators suggests alignment with streetwear style context",
+      "individual streetwear elements within a more formal context create a deliberate code-mixing effect",
+      "high-end streetwear pieces may carry the same visual signifiers as mass-market pieces"
+    ],
+    "limitations": [
+      "streetwear conventions shift rapidly and regional variations are significant",
+      "luxury brands produce pieces with streetwear visual language at different price points",
+      "logo visibility depends on image resolution and framing",
+      "streetwear elements are increasingly incorporated into non-streetwear styling contexts"
+    ],
+    "example_claims": [
+      "Visible brand graphics and athletic footwear are present, consistent with streetwear indicators.",
+      "An oversized silhouette with visible logo print is observed.",
+      "Multiple streetwear garment types are visible in the ensemble."
+    ],
+    "style_tags": ["streetwear"],
+    "occasion_tags": ["streetwear", "casual"],
+    "source_refs": ["Occasion and dress code taxonomy", "Contemporary streetwear style references", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "athletic_lounge_visual_indicators",
+    "category": "occasion",
+    "principle": "Athletic and lounge attire is characterized by performance-oriented garment types, stretch fabrics, and activewear silhouettes that signal physical activity or leisure context.",
+    "observable_patterns": [
+      "leggings or compression garment visible in lower body",
+      "sports bra or athletic tank visible in upper body",
+      "running shoes, training shoes, or sport-specific footwear visible",
+      "visible moisture-wicking or performance fabric sheen",
+      "sweatpants or jogger pant visible",
+      "no structured tailored garments present"
+    ],
+    "possible_effects": [
+      "cluster of athletic indicators signals alignment with athletic or lounge context",
+      "individual athletic pieces within a styled ensemble may signal athleisure styling",
+      "absence of any structured garments reinforces the activewear or lounge register"
+    ],
+    "limitations": [
+      "athleisure styling incorporates athletic pieces into non-athletic contexts deliberately",
+      "performance and luxury athletic brands may carry different style associations despite similar garment type",
+      "styling details such as jewelry or bags can shift the apparent register of athletic pieces",
+      "image framing may not capture full garment range for complete assessment"
+    ],
+    "example_claims": [
+      "Leggings and an athletic upper garment are visible, consistent with athletic or activewear context.",
+      "Performance footwear and a sports top combination suggests athletic or lounge register.",
+      "No structured or formal garments are visible; all elements are consistent with activewear."
+    ],
+    "style_tags": ["utilitarian", "streetwear"],
+    "occasion_tags": ["athletic", "lounge"],
+    "source_refs": ["Occasion and dress code taxonomy", "Activewear garment classification references"]
+  },
+  {
+    "id": "classic_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "The classic style archetype is characterized by observable garment features emphasizing timeless silhouette, neutral or conservative palette, quality fabric signals, and restrained detailing.",
+    "observable_patterns": [
+      "tailored blazer or structured jacket visible",
+      "neutral or conservative palette without strong chromatic statements",
+      "garment silhouettes without extreme proportion or design details",
+      "quality fabric texture signals such as wool, leather, or fine knit",
+      "limited or minimal visible branding or graphic content",
+      "accessories that are restrained and scale-appropriate"
+    ],
+    "possible_effects": [
+      "cluster of classic signals suggests an alignment with the classic style archetype",
+      "neutral palette with quality fabric signals may reinforce a classic, timeless impression",
+      "absence of trend-specific or era-coded design elements supports classic archetype reading"
+    ],
+    "limitations": [
+      "classic archetype is culturally specific and changes over time",
+      "quality fabric assessment from image alone is unreliable without high resolution",
+      "individual classic pieces can appear in non-classic style contexts",
+      "the boundary between classic and preppy or old money archetypes is porous"
+    ],
+    "example_claims": [
+      "A structured blazer with neutral palette and restrained detailing suggests alignment with the classic style archetype.",
+      "Limited visible branding and conservative garment forms are consistent with classic styling.",
+      "Quality fabric texture signals and timeless silhouette are observable in the ensemble."
+    ],
+    "style_tags": ["classic"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "formal"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "Style archetype frameworks", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "minimalist_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Minimalist style is characterized by observable features including limited color palette, absence of visible pattern or decoration, clean silhouette, and reduction of garment elements to essential forms.",
+    "observable_patterns": [
+      "one to three tonal values in the entire outfit",
+      "no visible pattern, print, or embellishment on garment surfaces",
+      "clean, uninterrupted silhouette with minimal structural complexity",
+      "absence of visible accessories or very limited accessory presence",
+      "garment design appears to reduce detail to essential form"
+    ],
+    "possible_effects": [
+      "visual simplicity produces a quiet, uncluttered outfit impression",
+      "silhouette and garment form become the primary visual communication element",
+      "minimal accessory presence reduces focal disruption",
+      "restrained color palette allows fabric quality or silhouette to dominate visually"
+    ],
+    "limitations": [
+      "minimalism as an archetype is subject to cultural and temporal variation",
+      "some complex garments are designed to appear minimal while containing significant construction detail",
+      "absence of decoration does not guarantee minimalist intent—it may reflect casual styling",
+      "price point and brand are not visually assessable as minimalist indicators"
+    ],
+    "example_claims": [
+      "The outfit contains one to two tonal values with no visible pattern, consistent with minimalist styling signals.",
+      "No visible embellishment or decorative detailing is present on any garment surface.",
+      "The silhouette appears clean and uninterrupted with minimal structural complexity."
+    ],
+    "style_tags": ["minimalist", "scandinavian_minimalism"],
+    "occasion_tags": ["smart_casual", "business_casual", "business_formal", "casual"],
+    "source_refs": ["Minimalist style principles", "Scandinavian minimalism references", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "maximalist_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Maximalist style is characterized by observable features including multiple colors, pattern mixing, visible layering, embellishment, and deliberate visual complexity across multiple garment zones.",
+    "observable_patterns": [
+      "three or more distinct colors visible in the outfit",
+      "multiple patterns or prints present across garment pieces",
+      "visible embellishment such as sequins, fringing, or embroidery",
+      "complex layering with multiple garment pieces and hemlines visible",
+      "multiple visible accessories including multiple jewelry elements",
+      "bold contrasts in silhouette, color, and texture simultaneously"
+    ],
+    "possible_effects": [
+      "high visual complexity distributes attention across multiple zones simultaneously",
+      "the outfit resists a single focal point due to competing visual elements",
+      "maximalist signals may suggest intentional visual abundance as a style statement",
+      "visual richness may increase perceived formality or occasion specificity in some contexts"
+    ],
+    "limitations": [
+      "maximalism is a matter of degree rather than a binary classification",
+      "intentional versus accidental visual complexity may be difficult to distinguish",
+      "cultural and subculture contexts determine whether a given level of complexity reads as maximalist",
+      "image crop may prevent full assessment of outfit complexity"
+    ],
+    "example_claims": [
+      "Multiple patterns, colors, and visible embellishment are present, consistent with maximalist styling signals.",
+      "Complex layering with multiple visible hemlines and accessory layers is observed.",
+      "The outfit contains three or more distinct colors and a visible pattern mix."
+    ],
+    "style_tags": ["maximalist", "bohemian", "romantic", "avant_garde"],
+    "occasion_tags": ["casual", "smart_casual"],
+    "source_refs": ["Style archetype frameworks", "Maximalist styling references", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "bohemian_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Bohemian style is characterized by observable features including relaxed or flowy silhouettes, earth or warm tones, visible natural or ethnic-inspired textures, floral or folk-inspired prints, and layered or accessory-rich styling.",
+    "observable_patterns": [
+      "flowy or maxi-length skirt or dress visible",
+      "earthy or warm color palette dominant",
+      "visible fringe, macramé, crochet, or woven texture",
+      "floral or folk-inspired print present",
+      "layered necklaces or visible chunky jewelry",
+      "loose, relaxed upper garment silhouette"
+    ],
+    "possible_effects": [
+      "cluster of bohemian indicators suggests alignment with the bohemian style archetype",
+      "earth palette and natural textures create an organic, free-spirited visual register",
+      "layered accessories combined with a flowing silhouette reinforces bohemian signaling"
+    ],
+    "limitations": [
+      "individual bohemian elements appear frequently in non-bohemian styling contexts",
+      "the bohemian archetype overlaps with romantic, vintage, and festival styling",
+      "cultural appropriation concerns surround some traditional textiles categorized as bohemian",
+      "exact hue and texture classification from image depends on image quality"
+    ],
+    "example_claims": [
+      "A flowing maxi skirt in an earth tone palette is visible, consistent with bohemian style signals.",
+      "Visible fringe or woven texture combined with layered jewelry suggests bohemian archetype alignment.",
+      "A folk-inspired floral print is present on a relaxed silhouette garment."
+    ],
+    "style_tags": ["bohemian"],
+    "occasion_tags": ["casual", "smart_casual"],
+    "source_refs": ["Style archetype frameworks", "Bohemian styling references", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "old_money_aesthetic_signals",
+    "category": "style_archetype",
+    "principle": "Old money aesthetic is associated with observable signals of traditional upper-class dress conventions: conservative palette, quality fabric textures, restrained tailoring, and specific heritage garment types.",
+    "observable_patterns": [
+      "polo shirt, oxford shirt, or blazer as visible garment type",
+      "navy, cream, camel, hunter green, or burgundy dominant in palette",
+      "visible quality fabric textures such as cashmere, tweed, or fine wool",
+      "cable-knit or fine-gauge knitwear visible",
+      "loafer, boat shoe, or traditional leather footwear visible",
+      "minimal visible branding; any visible branding is heritage or classic"
+    ],
+    "possible_effects": [
+      "cluster of old money indicators suggests alignment with heritage upper-class styling conventions",
+      "conservative palette and restrained quality signals create a quiet luxury visual register",
+      "traditional garment types in heritage palette reinforce the old money archetype reading"
+    ],
+    "limitations": [
+      "old money aesthetic is a contemporary internet-coded style category with loose boundaries",
+      "individual heritage garments appear in many non-old-money styling contexts",
+      "fabric quality assessment from image is unreliable",
+      "the category overlaps heavily with classic and preppy archetypes"
+    ],
+    "example_claims": [
+      "A blazer with cable-knit knitwear in a navy and cream palette is visible, consistent with old money style signals.",
+      "Traditional leather loafers and a heritage palette garment combination are observed.",
+      "Limited visible branding and a conservative color palette suggest old money aesthetic alignment."
+    ],
+    "style_tags": ["old_money", "classic", "preppy"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual"],
+    "source_refs": ["Style archetype frameworks", "Old money aesthetic references", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "edgy_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Edgy style is characterized by observable features drawing from alternative fashion, punk, goth, or rock subcultures: dark palette, hardware detailing, leather or faux-leather garments, deconstructed or asymmetric design elements.",
+    "observable_patterns": [
+      "leather or faux-leather jacket, trousers, or skirt visible",
+      "metal hardware detailing such as chains, studs, or zippers visible",
+      "predominantly dark palette with black dominant",
+      "asymmetric hem, cut-out, or deconstructed garment element visible",
+      "platform, combat, or chunky boot footwear visible",
+      "graphic tee with band, skull, or alternative imagery visible"
+    ],
+    "possible_effects": [
+      "cluster of edgy indicators suggests alignment with the edgy style archetype",
+      "dark palette with hardware creates a high-contrast, heavy visual register",
+      "deconstructed or asymmetric elements signal intentional design subversion"
+    ],
+    "limitations": [
+      "edgy elements appear in many contemporary fashion contexts outside alternative subcultures",
+      "the edgy archetype spans significant subcultural variation from punk to goth to grunge",
+      "leather jacket presence alone does not confirm edgy archetype without supporting elements",
+      "individual element reading depends on styling context and combination"
+    ],
+    "example_claims": [
+      "A leather jacket with visible metal hardware is present, consistent with edgy style archetype signals.",
+      "Dark palette dominance with platform footwear and hardware detailing is observed.",
+      "An asymmetric hem or deconstructed garment element is visible in the ensemble."
+    ],
+    "style_tags": ["edgy"],
+    "occasion_tags": ["casual", "streetwear", "smart_casual"],
+    "source_refs": ["Style archetype frameworks", "Edgy and alternative fashion references", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "romantic_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Romantic style is characterized by observable features including soft fabrics, feminine silhouettes, floral or delicate prints, pastel or blush palette, and flowing or gathered garment forms.",
+    "observable_patterns": [
+      "floral print present on garment surface",
+      "soft pastel or blush palette dominant",
+      "gathered, ruffled, or layered skirt visible",
+      "lace, chiffon, or delicate fabric texture visible",
+      "soft, fluid silhouette in upper or lower garment",
+      "bow, ribbon, or delicate garment embellishment visible"
+    ],
+    "possible_effects": [
+      "cluster of romantic indicators suggests alignment with the romantic style archetype",
+      "soft palette and delicate fabric textures create a gentle, feminine visual register",
+      "flowing or gathered silhouette with floral print reinforces romantic archetype signaling"
+    ],
+    "limitations": [
+      "romantic elements appear in many non-romantic styling contexts",
+      "the romantic archetype overlaps significantly with bohemian and feminine-coded classics",
+      "individual floral print presence is not sufficient alone to confirm romantic archetype",
+      "gender association of romantic styling elements is culturally contingent"
+    ],
+    "example_claims": [
+      "A floral print on a gathered skirt in a soft pastel palette is visible, consistent with romantic style signals.",
+      "Lace or chiffon texture with ruffled detailing is observed in the garment.",
+      "A soft, flowing silhouette with delicate embellishment is present."
+    ],
+    "style_tags": ["romantic"],
+    "occasion_tags": ["casual", "smart_casual", "formal"],
+    "source_refs": ["Style archetype frameworks", "Romantic styling references", "Trinny and Susannah framework"]
+  },
+  {
+    "id": "capsule_wardrobe_interchangeability",
+    "category": "wardrobe_logic",
+    "principle": "Capsule wardrobe principles prioritize garments that can combine interchangeably across multiple outfit configurations, maximizing outfit yield from a limited number of pieces.",
+    "observable_patterns": [
+      "garments in neutral or tonal palette that combine without chromatic conflict",
+      "separates rather than coordinated sets—each piece readable as standalone",
+      "absence of garments with strong occasion-specific or statement-only visual signals",
+      "basic silhouette garments that accept varied layering partners"
+    ],
+    "possible_effects": [
+      "neutral-base wardrobe pieces may visually pair with a wider range of other garments",
+      "separates allow more independent recombination than sets",
+      "absence of occasion-specific pieces suggests broader contextual range per garment"
+    ],
+    "limitations": [
+      "capsule wardrobe assessment requires seeing a wardrobe collection, not a single outfit",
+      "interchangeability is a function of the full wardrobe system, not individual pieces",
+      "lifestyle and occasion needs determine whether a capsule is truly functional",
+      "image analysis can only assess visible garment properties, not wardrobe-level context"
+    ],
+    "example_claims": [
+      "The visible garment piece is in a neutral palette suggesting high combinatorial versatility.",
+      "The garment appears to be a basic silhouette without strong statement-specific visual signals.",
+      "No occasion-restricting visual elements are present that would limit the garment's contextual range."
+    ],
+    "style_tags": ["minimalist", "classic", "scandinavian_minimalism"],
+    "occasion_tags": ["business_casual", "smart_casual", "casual"],
+    "source_refs": ["Capsule wardrobe theory", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "layering_compatibility_signals",
+    "category": "wardrobe_logic",
+    "principle": "Garments designed for layering compatibility share visual and structural properties that allow them to function as inner or outer layers without creating bulk, proportion disruption, or visual conflict.",
+    "observable_patterns": [
+      "a slim-fit inner garment visible beneath a structured outer layer",
+      "tonal or color-compatible inner and outer layer visible",
+      "outer layer neckline or opening reveals inner garment at collar or hem",
+      "layering piece proportioned to avoid excessive bulk",
+      "inner layer visible at sleeve or hem without excessive length conflict"
+    ],
+    "possible_effects": [
+      "slim inner layer beneath structured outer preserves the outer garment silhouette",
+      "tonal inner and outer layers maintain visual continuity under the outer piece",
+      "inner garment visible at collar adds intentional layering detail"
+    ],
+    "limitations": [
+      "bulk from layering depends on fabric weight—only partially assessable from image",
+      "layering compatibility is a function of the complete outfit and body proportions, not individual pieces",
+      "pose and image angle affect how layering reads",
+      "collar and cuff visibility of inner layers requires sufficient image resolution and frame"
+    ],
+    "example_claims": [
+      "A slim inner garment is visible beneath a structured outer layer, suggesting layering compatibility.",
+      "Inner and outer garments share a tonal relationship, maintaining visual continuity.",
+      "The inner collar or hem is visible beyond the outer layer, creating an intentional layering detail."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist", "utilitarian"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual"],
+    "source_refs": ["Capsule wardrobe theory", "Tim Gunn - A Guide to Quality Taste and Style", "Layering compatibility principles"]
+  },
+  {
+    "id": "outfit_coordination_color_rule_of_three",
+    "category": "wardrobe_logic",
+    "principle": "Outfits commonly use a rule-of-three color structure: a dominant base color, a secondary supporting color, and an optional accent. This distributes visual interest without creating overwhelming chromatic complexity.",
+    "observable_patterns": [
+      "one clearly dominant color occupying the largest garment area",
+      "a second color present in a smaller garment zone or accessory",
+      "a third color appearing as a minimal accent in an accessory or detail",
+      "no more than three distinct hues visible across the full outfit"
+    ],
+    "possible_effects": [
+      "balanced color distribution creates a visually coherent outfit narrative",
+      "accent color draws focal attention proportionate to its area",
+      "three-hue maximum reduces chromatic competition between elements"
+    ],
+    "limitations": [
+      "the rule of three is a guideline rather than a perceptual law",
+      "pattern pieces may contain multiple hues that complicate the count",
+      "neutral colors are sometimes excluded from the count in practice, varying interpretation",
+      "image color accuracy depends on lighting and camera calibration"
+    ],
+    "example_claims": [
+      "One dominant base color occupies the largest visible garment area.",
+      "A second color is visible in a smaller secondary garment zone or accessory.",
+      "An accent color appears in a minimal area, consistent with a three-color coordination structure."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist", "bohemian"],
+    "occasion_tags": ["smart_casual", "business_casual", "casual", "formal"],
+    "source_refs": ["Outfit coordination theory", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "metal_mixing_accessory_harmony",
+    "category": "wardrobe_logic",
+    "principle": "Accessories in the same metal family—all gold-toned, all silver-toned, or all rose-gold-toned—create visual consistency in metal detailing. Mixed metal tones across accessories may create visual dissonance depending on context.",
+    "observable_patterns": [
+      "multiple metal accessories visible in the same tone family",
+      "jewelry and belt buckle visible in matching metal tone",
+      "shoe hardware and bag hardware visible in compatible metal tones",
+      "mixed gold and silver accessories visible across the outfit"
+    ],
+    "possible_effects": [
+      "matched metal tone across accessories creates visual consistency in hardware",
+      "mixed metal tone may create visible contrast between accessory elements",
+      "metal tone consistency with warm or cool garment palette may reinforce overall tonal harmony"
+    ],
+    "limitations": [
+      "metal tone assessment requires sufficient image resolution and lighting",
+      "intentional mixed-metal styling is a contemporary trend and not inherently dissonant",
+      "small accessories may not be visible or identifiable in full-length images",
+      "image color accuracy significantly affects metal tone reading"
+    ],
+    "example_claims": [
+      "Multiple visible accessories appear in the same gold-toned metal family.",
+      "Mixed gold and silver-toned accessories are visible across the outfit.",
+      "Visible jewelry, belt hardware, and shoe hardware appear in a consistent metal tone."
+    ],
+    "style_tags": ["classic", "minimalist", "old_money", "preppy"],
+    "occasion_tags": ["formal", "business_formal", "business_casual", "smart_casual"],
+    "source_refs": ["Accessory coordination theory", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "shoe_outfit_register_alignment",
+    "category": "wardrobe_logic",
+    "principle": "Footwear carries significant occasion-register signals and must align with the overall outfit register to avoid visual code mismatch. Footwear that reads as significantly more or less formal than other garments creates a visible incongruity.",
+    "observable_patterns": [
+      "athletic sneakers visible beneath a formal or structured garment combination",
+      "formal leather shoe visible beneath casual or athleisure garments",
+      "sandal or open-toe shoe visible with a formal ensemble",
+      "boot style aligning with or contrasting the casual or formal register of the outfit",
+      "footwear formality register apparent in design, material, and construction visible in image"
+    ],
+    "possible_effects": [
+      "footwear-outfit register mismatch may create a visible code-conflict",
+      "deliberate mismatch may signal intentional styling (sneakers with suits)",
+      "aligned footwear register reinforces the overall outfit occasion reading",
+      "highly formal footwear can raise the perceived register of an otherwise casual outfit"
+    ],
+    "limitations": [
+      "footwear register conventions shift with fashion trends",
+      "luxury sneakers may carry different register signals than mass-market ones without brand identification",
+      "image crop may exclude footwear entirely",
+      "intent (deliberate vs accidental mismatch) is not assessable from image alone"
+    ],
+    "example_claims": [
+      "Athletic sneakers appear with a structured suit combination, creating a potential register contrast.",
+      "Formal leather footwear aligns with the structured garment combination visible above.",
+      "The footwear appears to occupy a similar formality register as the remainder of the outfit."
+    ],
+    "style_tags": ["classic", "streetwear", "minimalist", "preppy"],
+    "occasion_tags": ["formal", "business_formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Occasion and dress code taxonomy", "Tan France Queer Eye principles", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "accessory_scale_proportion",
+    "category": "proportion",
+    "principle": "Accessory scale—particularly for jewelry, bags, and belts—interacts with garment and figure scale. Accessories that are visually very large or very small relative to the garment zone may appear disproportionate.",
+    "observable_patterns": [
+      "small delicate jewelry visible on a heavily structured or voluminous outfit",
+      "oversized statement jewelry visible against a plain, minimal garment",
+      "bag volume appearing disproportionately large or small relative to overall outfit scale",
+      "belt width appearing narrow or wide relative to the waist zone and garment proportions",
+      "earring, necklace, or bracelet visible at a scale relative to garment zones"
+    ],
+    "possible_effects": [
+      "scale-appropriate accessories appear integrated with the outfit proportion system",
+      "disproportionately large accessories may dominate and overshadow other garment elements",
+      "very small accessories may disappear visually against a heavily textured or complex outfit",
+      "belt width interacts with the visual weight of the waist zone"
+    ],
+    "limitations": [
+      "accessory scale perception is relative and depends on both garment and figure scale",
+      "image crop may not show all accessories in the outfit",
+      "camera distance significantly affects how accessory scale reads relative to outfit",
+      "fine or delicate accessories may not be visible at standard image resolution"
+    ],
+    "example_claims": [
+      "Oversized statement jewelry is visible against a plain, minimal garment background.",
+      "The visible bag scale appears proportionate relative to the overall outfit zone.",
+      "A narrow belt is visible at the waist against a heavily volumed or layered garment."
+    ],
+    "style_tags": ["classic", "minimalist", "maximalist", "romantic", "bohemian"],
+    "occasion_tags": ["formal", "smart_casual", "business_casual", "casual"],
+    "source_refs": ["Accessory proportion principles", "Tim Gunn - A Guide to Quality Taste and Style", "General visual composition theory"]
+  },
+  {
+    "id": "collar_type_formality_signal",
+    "category": "occasion",
+    "principle": "Collar type is a visual formality marker. Structured collars—pointed, spread, or cutaway—signal higher formality; collarless, mandarin, or casual collar types signal lower formality.",
+    "observable_patterns": [
+      "pointed or spread collar dress shirt visible at neckline",
+      "collarless top or crew neck visible",
+      "mandarin or band collar visible",
+      "polo collar visible as an intermediate formality signal",
+      "lapel and collar of a jacket visible as a structural formality element",
+      "open, unbuttoned collar on an otherwise formal shirt"
+    ],
+    "possible_effects": [
+      "structured spread or pointed collar signals alignment with formal or business formal register",
+      "collarless neckline reduces formality signaling at the collar zone",
+      "open collar on a dress shirt may shift the perceived register downward",
+      "polo collar occupies a middle formality register"
+    ],
+    "limitations": [
+      "collar type is one formality signal among many and must be read in combination",
+      "collar type classification requires sufficient image resolution and framing",
+      "fashion trends adapt collar formality conventions over time",
+      "unbuttoned collar may be intentional styling choice rather than fit issue"
+    ],
+    "example_claims": [
+      "A structured spread collar dress shirt is visible, consistent with business formal formality indicators.",
+      "A collarless top is visible, reducing collar-zone formality signals.",
+      "The shirt collar appears open and unbuttoned, shifting the visible formality register."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist"],
+    "occasion_tags": ["business_formal", "formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Tailoring terminology", "Occasion dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "garment_condition_visual_signal",
+    "category": "fabric",
+    "principle": "Visible garment condition—including visible wrinkles, pilling, fading, distressing, or structural damage—affects the perceived care level and intentionality of a garment in the context of its occasion register.",
+    "observable_patterns": [
+      "visible heavy creasing or wrinkling across garment surface",
+      "fabric pilling visible on knitwear or wool surfaces",
+      "visible fading or color inconsistency on denim",
+      "intentional distressing such as rips, fraying, or whiskering on denim",
+      "staining, snags, or structural damage visible on garment"
+    ],
+    "possible_effects": [
+      "heavy wrinkling in a formal garment may suggest wear or care misalignment",
+      "intentional distressing signals a deliberate casual or street styling choice",
+      "pilling or fading may reduce perceived garment quality independent of cut or design",
+      "pristine condition across all garments signals care investment"
+    ],
+    "limitations": [
+      "some wrinkles are inherent to fabric type and do not indicate neglect",
+      "intentional vs accidental distressing requires styling context to distinguish",
+      "image resolution and lighting affect how fabric condition reads",
+      "shadow patterns may appear as wrinkles or damage in some lighting conditions"
+    ],
+    "example_claims": [
+      "Visible heavy creasing is present across the garment surface.",
+      "Intentional distressing is visible in the denim garment consistent with casual or street styling.",
+      "Fabric pilling is observable on the knitwear garment surface."
+    ],
+    "style_tags": ["streetwear", "utilitarian", "bohemian"],
+    "occasion_tags": ["casual", "streetwear"],
+    "source_refs": ["Fabric and fit fundamentals", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "fabric_weight_visual_volume",
+    "category": "fabric",
+    "principle": "Fabric weight interacts with garment silhouette to determine whether a garment holds a structured shape or collapses into a draped form. Heavier fabrics tend to fall with more gravity and structure; lighter fabrics may float or gather.",
+    "observable_patterns": [
+      "thick or substantial-appearing fabric maintaining a rigid hem or edge",
+      "lightweight fabric appearing to float or billow even in a static image",
+      "coat or outerwear fabric appearing to hold its form away from the body",
+      "thin or sheer fabric gathering or folding with gravity",
+      "medium-weight fabric falling with a defined drape without extreme rigidity"
+    ],
+    "possible_effects": [
+      "heavy fabric creates a grounded, structured garment impression",
+      "lightweight fabric creates a floating, ethereal garment impression",
+      "medium-weight fabric balances structure and drape for a versatile visual effect",
+      "fabric weight affects how clearly design lines and silhouette edges read"
+    ],
+    "limitations": [
+      "fabric weight is not directly observable and must be inferred from drape and structural behavior",
+      "garment construction and lining may create heavier behavior from a lighter base fabric",
+      "image still captures may not reveal fabric weight-dependent movement or float",
+      "environmental conditions such as wind affect how lightweight fabrics appear"
+    ],
+    "example_claims": [
+      "The garment fabric appears to maintain a structured form consistent with a heavier weight material.",
+      "The garment fabric appears to float or billow consistent with a lightweight material.",
+      "The coat fabric appears to hold its form at the hem, suggesting structural weight."
+    ],
+    "style_tags": ["classic", "romantic", "minimalist", "avant_garde"],
+    "occasion_tags": ["formal", "business_formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Fabric and fit fundamentals", "Drape and structure theory", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "sheer_opacity_layering_effect",
+    "category": "fabric",
+    "principle": "Sheer or semi-transparent fabrics create visible layering depth by revealing underlying garment layers or body contour. The degree of transparency determines how much visual information passes through.",
+    "observable_patterns": [
+      "inner garment or lining visible through outer sheer layer",
+      "skin tone or body contour visible through semi-transparent fabric",
+      "fabric color appearing lighter or less saturated over dark underlayer",
+      "pattern on inner garment partially visible through sheer overlay",
+      "sheer sleeves or panels visible in combination with opaque garment zones"
+    ],
+    "possible_effects": [
+      "sheer layering creates visible depth and dimensionality in the garment zone",
+      "inner contrast layer visible through sheer creates a focal element",
+      "partial transparency allows body contour information to remain visible",
+      "sheer zones adjacent to opaque create contrast in visual information density"
+    ],
+    "limitations": [
+      "degree of transparency depends on fabric construction and cannot be precisely quantified from image",
+      "backlighting significantly increases apparent transparency",
+      "compressed images may lose transparency detail in sheer zones",
+      "styling intent of sheer layers is not assessable from image alone"
+    ],
+    "example_claims": [
+      "An inner garment is partially visible through a sheer outer layer.",
+      "Skin tone is partially visible through a semi-transparent fabric panel.",
+      "Sheer sleeves create a visible contrast in opacity with adjacent opaque garment zones."
+    ],
+    "style_tags": ["romantic", "avant_garde", "maximalist", "bohemian"],
+    "occasion_tags": ["formal", "smart_casual", "casual"],
+    "source_refs": ["Fabric and fit fundamentals", "Fashion drape theory", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "embellishment_focal_weight",
+    "category": "focal_point",
+    "principle": "Embellishment—including sequins, embroidery, beading, or hardware—creates areas of concentrated visual complexity that function as focal elements within an outfit.",
+    "observable_patterns": [
+      "sequin or metallic embellishment visible on a garment surface",
+      "embroidery pattern concentrated in a specific garment zone",
+      "beading or crystal detailing visible at collar, hem, or sleeve",
+      "studded or hardware-detailed zone on jacket or belt",
+      "embellished pocket or panel zone surrounded by plain fabric"
+    ],
+    "possible_effects": [
+      "embellished zone becomes a dominant focal point in the outfit composition",
+      "reflective embellishment may increase visual weight in the embellished zone",
+      "concentrated embellishment surrounded by plain zones creates a strong focal-to-rest contrast",
+      "embellishment at specific garment zones directs attention to those locations"
+    ],
+    "limitations": [
+      "fine embellishment may not be visible at standard image resolution",
+      "lighting direction is critical for embellishment visibility, especially reflective types",
+      "embellishment density and distribution affect whether a single or multiple focal zones exist",
+      "embellishment on a heavily patterned garment may reduce rather than increase focal clarity"
+    ],
+    "example_claims": [
+      "Sequin or metallic embellishment is visible concentrated in the upper garment zone, creating a focal element.",
+      "Embroidery detailing is visible at the collar, directing attention to the neckline zone.",
+      "Studded hardware creates a focal element at the belt or jacket zone."
+    ],
+    "style_tags": ["maximalist", "romantic", "edgy", "avant_garde", "bohemian"],
+    "occasion_tags": ["formal", "smart_casual", "casual"],
+    "source_refs": ["Tim Gunn - A Guide to Quality Taste and Style", "General visual composition theory", "Embellishment design references"]
+  },
+  {
+    "id": "footwear_height_silhouette_impact",
+    "category": "proportion",
+    "principle": "Footwear heel height alters the visible alignment of the lower leg relative to the floor, affecting the perceived proportion of the lower body zone and its interaction with trouser break, hem length, and overall silhouette height.",
+    "observable_patterns": [
+      "flat shoe or sneaker visible with low or no heel",
+      "block heel or kitten heel visible with moderate elevation",
+      "stiletto or high heel visible with significant elevation",
+      "platform sole visible with significant but different elevation geometry than thin heel",
+      "trouser break or skirt hem relationship to shoe height visible"
+    ],
+    "possible_effects": [
+      "higher heel raises the foot arch and may alter the visual weight line of the lower leg",
+      "heel height changes how trouser break quantity reads at a given trouser length",
+      "flat footwear combined with hemlines calibrated for heels may create excess trouser break",
+      "platform soles create elevation without ankle angle change, producing a different silhouette effect from thin heels"
+    ],
+    "limitations": [
+      "full-length image required to assess heel height and its relationship with hemline",
+      "heel height assessment from image is approximate",
+      "trouser break and hemline measurement requires the full leg zone to be visible",
+      "pose angle and foot position affect how heel height reads in image"
+    ],
+    "example_claims": [
+      "Flat footwear is visible, suggesting no heel-height elevation effect on the lower silhouette.",
+      "High heels are visible, which may interact with the trouser break length at the hem.",
+      "Platform soles are visible, creating vertical elevation with a different geometry from stiletto heels."
+    ],
+    "style_tags": ["classic", "romantic", "edgy", "minimalist"],
+    "occasion_tags": ["formal", "smart_casual", "business_casual", "casual"],
+    "source_refs": ["Fashion proportion theory", "Trinny and Susannah framework", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "sleeve_length_visual_register",
+    "category": "proportion",
+    "principle": "Sleeve length is a formality and proportion signal. Full-length sleeves are associated with higher formality; shorter or absent sleeves carry lower formality associations that interact with other garment elements.",
+    "observable_patterns": [
+      "long sleeve ending at or near the wrist visible",
+      "three-quarter sleeve ending between elbow and wrist visible",
+      "short sleeve ending at or near the mid-upper arm visible",
+      "sleeveless garment with no sleeve visible",
+      "sleeve rolled up revealing a portion of the forearm"
+    ],
+    "possible_effects": [
+      "full-length sleeve suggests a more formal or conservative visual register",
+      "sleeveless upper garment may reduce perceived formality unless compensated by other elements",
+      "rolled sleeve may suggest a relaxed or informal modifier to an otherwise structured garment",
+      "three-quarter sleeve occupies an intermediate proportion zone"
+    ],
+    "limitations": [
+      "sleeve length interacts with garment type in determining formality—a sleeveless blazer reads differently from a sleeveless t-shirt",
+      "layering may add or obscure sleeve length",
+      "image crop may prevent sleeve length assessment",
+      "pose and arm position alter the visible sleeve length in an image"
+    ],
+    "example_claims": [
+      "A full-length sleeve ending at the wrist is visible, consistent with a more formal register signal.",
+      "A sleeveless upper garment is visible, reducing sleeve-zone formality signals.",
+      "A rolled sleeve is visible, suggesting an informal modifier to the garment register."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist", "utilitarian"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "casual", "formal"],
+    "source_refs": ["Tailoring terminology", "Occasion dress code taxonomy", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "color_repetition_outfit_cohesion",
+    "category": "wardrobe_logic",
+    "principle": "Repeating a color across multiple garment zones or accessories creates a visual echo that increases the perceived cohesion of the outfit composition.",
+    "observable_patterns": [
+      "same hue appearing in both garment and accessory",
+      "shoe and belt or bag visible in the same color",
+      "accent hue from garment print echoed in a solid accessory",
+      "inner layer color echoed in an outer layer trim or detail",
+      "hat or headwear repeating a garment color"
+    ],
+    "possible_effects": [
+      "color repetition creates a visual linking between garment zones and accessories",
+      "echoed colors increase perceived intentionality of the outfit combination",
+      "distributed repetition of one hue may create a coherent color narrative across the outfit",
+      "single-zone accent hue echoed in an accessory reinforces the accent's role in the palette"
+    ],
+    "limitations": [
+      "color repetition requires accurate color comparison across different garment types and textures",
+      "lighting variation across zones of the image may make apparent color matching unreliable",
+      "subtle color echoes may not be detectable at standard image resolution",
+      "image color calibration affects cross-zone color comparison accuracy"
+    ],
+    "example_claims": [
+      "The shoe and belt appear in a matching or closely related color, creating a visual echo.",
+      "An accent hue from the garment appears to be repeated in a visible accessory.",
+      "The same color is observed in both a garment detail and a standalone accessory."
+    ],
+    "style_tags": ["classic", "preppy", "minimalist", "old_money"],
+    "occasion_tags": ["formal", "business_formal", "business_casual", "smart_casual", "casual"],
+    "source_refs": ["Outfit coordination theory", "Tim Gunn - A Guide to Quality Taste and Style", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "preppy_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Preppy style is associated with observable signals drawn from Ivy League and country club fashion traditions: specific garment types, heritage palette, polo or oxford shirts, nautical elements, and clean, structured silhouettes.",
+    "observable_patterns": [
+      "polo shirt, oxford shirt, or button-down shirt visible",
+      "chino trouser, madras, or plaid short visible",
+      "navy, cream, kelly green, red, or yellow palette dominant",
+      "boat shoe, loafer, or clean sneaker visible as footwear",
+      "cable-knit or fine knitwear visible",
+      "blazer or structured jacket in heritage palette"
+    ],
+    "possible_effects": [
+      "cluster of preppy indicators suggests alignment with the preppy style archetype",
+      "heritage palette and garment type combination create a traditional American collegiate register",
+      "individual preppy garment types placed in other contexts may signal hybrid or ironic styling"
+    ],
+    "limitations": [
+      "preppy archetype overlaps significantly with classic and old money archetypes",
+      "individual preppy garment types appear in many non-preppy style contexts",
+      "geographical and generational variation in preppy conventions is significant",
+      "brand identification may be required to confirm heritage vs generic interpretation"
+    ],
+    "example_claims": [
+      "A polo shirt and chino combination in a heritage palette is visible, consistent with preppy style signals.",
+      "Boat shoe or loafer footwear is visible alongside a blazer in a navy palette.",
+      "Multiple preppy garment types are present with a classic heritage color palette."
+    ],
+    "style_tags": ["preppy"],
+    "occasion_tags": ["smart_casual", "casual", "business_casual"],
+    "source_refs": ["Style archetype frameworks", "Preppy style references", "Tim Gunn - A Guide to Quality Taste and Style"]
+  },
+  {
+    "id": "utilitarian_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Utilitarian style draws on workwear and functional clothing traditions, characterized by observable garment features such as cargo pockets, durable fabric appearances, neutral or military-adjacent palette, and functional design elements.",
+    "observable_patterns": [
+      "cargo pockets visible on trousers or jacket",
+      "canvas, denim, or heavy cotton fabric appearance",
+      "military olive, tan, khaki, or navy palette dominant",
+      "work boot or trail boot visible as footwear",
+      "technical or functional-appearing garment detailing",
+      "utility vest or jacket with multiple pockets visible"
+    ],
+    "possible_effects": [
+      "cluster of utilitarian indicators suggests alignment with the utilitarian style archetype",
+      "functional design elements in a non-functional context signal deliberate utilitarian styling",
+      "military-adjacent palette combined with workwear garment types reinforces utilitarian register"
+    ],
+    "limitations": [
+      "utilitarian garment types appear widely in non-utilitarian contexts through fashion adoption",
+      "luxury brands produce utilitarian-coded garments with different quality and price signals",
+      "individual functional elements in otherwise non-utilitarian outfits create hybrid readings",
+      "the distinction between utilitarian styling and workwear is context-dependent"
+    ],
+    "example_claims": [
+      "Cargo trousers with multiple visible pockets are present in an olive or khaki palette.",
+      "Heavy canvas or work boot footwear is visible alongside functional garment detailing.",
+      "Multiple utilitarian garment elements are visible in a military-adjacent color palette."
+    ],
+    "style_tags": ["utilitarian"],
+    "occasion_tags": ["casual", "streetwear"],
+    "source_refs": ["Style archetype frameworks", "Utilitarian and workwear fashion references", "Tan France Queer Eye principles"]
+  },
+  {
+    "id": "avant_garde_style_archetype_signals",
+    "category": "style_archetype",
+    "principle": "Avant-garde style is characterized by observable features that depart from conventional garment construction and proportion norms: asymmetry, deconstruction, extreme proportion, unexpected material use, or deliberate subversion of standard garment forms.",
+    "observable_patterns": [
+      "asymmetric hemline or construction visible",
+      "garment appears deconstructed with exposed seams or raw edges",
+      "extreme proportion—very oversized or very undersized relative to conventional fit",
+      "unexpected material use visible such as structured sculptural volumes",
+      "garment form does not correspond to conventional garment categories",
+      "deliberate subversion of expected garment function or structure"
+    ],
+    "possible_effects": [
+      "avant-garde indicators signal a departure from conventional styling conventions",
+      "deconstruction and asymmetry draw attention to garment construction as a design element",
+      "extreme proportion may create unfamiliar silhouette readings outside typical fashion grammar",
+      "unexpected material use may create confusion with standard garment classification"
+    ],
+    "limitations": [
+      "avant-garde assessment is highly contextually dependent",
+      "contemporary fashion has adopted many formerly avant-garde elements into mainstream contexts",
+      "deconstruction as a design choice vs wear damage requires contextual judgment",
+      "image framing and resolution affect how avant-garde construction details read"
+    ],
+    "example_claims": [
+      "An asymmetric hemline is visible, departing from conventional garment hem geometry.",
+      "Exposed seams or raw edge finishing is visible, consistent with deconstructed design.",
+      "The garment silhouette appears to exceed conventional proportion norms significantly."
+    ],
+    "style_tags": ["avant_garde"],
+    "occasion_tags": ["casual", "smart_casual"],
+    "source_refs": ["Style archetype frameworks", "Avant-garde fashion references", "Kibbe silhouette line concepts"]
+  },
+  {
+    "id": "cost_per_wear_visual_quality_proxy",
+    "category": "wardrobe_logic",
+    "principle": "Garments that carry visible quality signals—construction precision, fabric texture integrity, structural consistency, minimal wear indicators—may proxy for higher durability and wear frequency potential, supporting cost-per-wear logic.",
+    "observable_patterns": [
+      "seams and stitching appear precise and even at visible edges",
+      "fabric surface appears consistent without pilling, snags, or distortion",
+      "garment structure maintains its shape under normal wear conditions",
+      "finishing details such as hem, collar, or pocket edges appear clean",
+      "no visible stress or wear at high-friction zones"
+    ],
+    "possible_effects": [
+      "visible quality construction signals may proxy for garment durability",
+      "structurally consistent garments appear well-maintained relative to usage level",
+      "quality signals support wardrobe logic of higher initial investment for longer wear"
+    ],
+    "limitations": [
+      "garment quality from image alone is highly unreliable—price, brand, and material cannot be confirmed visually",
+      "new garments of all quality levels may appear pristine in images",
+      "photographic resolution may not resolve fine construction quality details",
+      "stylistic manipulation such as pressing or steaming affects apparent quality signals in images"
+    ],
+    "example_claims": [
+      "Visible seams and finishing appear clean and precise at the observable edges.",
+      "The garment surface appears consistent without visible pilling or distortion.",
+      "No visible stress or wear is detected at the collar, cuffs, or pocket zones."
+    ],
+    "style_tags": ["classic", "minimalist", "old_money", "preppy"],
+    "occasion_tags": ["business_formal", "business_casual", "smart_casual", "formal"],
+    "source_refs": ["Capsule wardrobe theory", "Tim Gunn - A Guide to Quality Taste and Style", "Cost-per-wear logic principles"]
+  }
+]

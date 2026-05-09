@@ -1,29 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactElement, SVGProps } from "react";
-import { type ChangeEvent, useEffect, useId, useState } from "react";
+import type { SVGProps } from "react";
+import { type ChangeEvent, useEffect, useId, useRef, useState } from "react";
 
-type Domain = {
-  id: string;
-  label: string;
-  icon: ReactElement;
-  note: string;
-  precision: string;
-  latency: string;
-};
-
-type SampleCard = {
-  id: string;
-  label: string;
-  art: ReactElement;
-};
+import { builtInPacks } from "../lib/domainPacks";
+import type { DomainPack } from "../lib/domainPacks/types";
+import { useAudit } from "./audit-context";
 
 type UploadState =
   | { kind: "idle" }
   | { kind: "uploading" }
   | { kind: "success"; message: string }
   | { kind: "error"; message: string };
+
+type CreatePackForm = {
+  name: string;
+  description: string;
+  entities: string;
+  principles: string;
+  forbidden: string;
+};
+
+async function parseApiJson<T>(response: Response, label: string): Promise<T> {
+  const contentType = response.headers.get("content-type") ?? "";
+  const rawBody = await response.text();
+
+  if (!contentType.includes("application/json")) {
+    const returnedHtml = rawBody.trimStart().startsWith("<");
+    throw new Error(
+      returnedHtml
+        ? `${label} returned HTML instead of JSON. Restart the Next server so the latest API routes are loaded.`
+        : `${label} returned ${contentType || "an unknown content type"} instead of JSON.`,
+    );
+  }
+
+  try {
+    return JSON.parse(rawBody) as T;
+  } catch {
+    throw new Error(`${label} returned malformed JSON.`);
+  }
+}
 
 const svgProps: SVGProps<SVGSVGElement> = {
   fill: "none",
@@ -33,116 +50,10 @@ const svgProps: SVGProps<SVGSVGElement> = {
   strokeLinejoin: "round",
 };
 
-const domains: Domain[] = [
-  {
-    id: "fashion",
-    label: "Fashion Module",
-    note: "Garment tagging, fabric reads, and fit-check evidence.",
-    precision: "99.2%",
-    latency: "<200ms",
-    icon: (
-      <svg viewBox="0 0 24 24" {...svgProps}>
-        <path d="M5 9.5 9.4 5h5.2L19 9.5V19H5Z" />
-        <path d="M9.4 5 12 8l2.6-3" />
-      </svg>
-    ),
-  },
-  {
-    id: "interior",
-    label: "Interior Module",
-    note: "Fixture recognition, material QA, and layout anomalies.",
-    precision: "98.7%",
-    latency: "<280ms",
-    icon: (
-      <svg viewBox="0 0 24 24" {...svgProps}>
-        <path d="M5 10h14v5H5z" />
-        <path d="M7 10V7h10v3" />
-        <path d="M7 15v3M17 15v3" />
-      </svg>
-    ),
-  },
-  // {
-  //   id: "food",
-  //   label: "Food Module",
-  //   note: "Ingredient signals, plating claims, and freshness cues.",
-  //   precision: "97.9%",
-  //   latency: "<240ms",
-  //   icon: (
-  //     <svg viewBox="0 0 24 24" {...svgProps}>
-  //       <path d="M6 4v8M9 4v8M6 8h3M15 4v15M18 4c0 4-3 4-3 0" />
-  //     </svg>
-  //   ),
-  // },
-  // {
-  //   id: "product",
-  //   label: "Product QA",
-  //   note: "Packaging validation, defect triage, and compliance support.",
-  //   precision: "99.4%",
-  //   latency: "<160ms",
-  //   icon: (
-  //     <svg viewBox="0 0 24 24" {...svgProps}>
-  //       <path d="M5 4h14v16H5z" />
-  //       <path d="M8 8h8M8 12h4M8 16h5" />
-  //       <path d="m15 11 2 2 3-3" />
-  //     </svg>
-  //   ),
-  // },
-];
-
-function ShirtArt() {
-  return (
-    <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-b from-violet-50 to-violet-100/60">
-      <div
-        className="absolute inset-x-[22%] bottom-[14%] top-[26%] bg-gradient-to-b from-violet-300/70 to-violet-400/50"
-        style={{
-          clipPath:
-            "polygon(18% 0, 32% 0, 39% 12%, 61% 12%, 68% 0, 82% 0, 100% 17%, 85% 29%, 85% 100%, 15% 100%, 15% 29%, 0 17%)",
-        }}
-      />
-      <div className="absolute left-1/2 top-[28%] h-[10%] w-[24%] -translate-x-1/2 rounded-b-full bg-violet-300/50" />
-    </div>
-  );
-}
-
-function ChairArt() {
-  return (
-    <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-b from-amber-50 to-amber-100/60">
-      <div className="absolute left-[34%] top-[18%] h-[28%] w-[32%] rounded-t-xl rounded-b-[10px] bg-gradient-to-b from-amber-300/80 to-amber-400/65" />
-      <div className="absolute left-[28%] top-[48%] h-[16%] w-[44%] rounded-[18px] bg-gradient-to-b from-amber-300/75 to-amber-400/60" />
-      <div className="absolute inset-x-0 bottom-[18%] top-[48%]">
-        <div className="absolute bottom-0 left-[36%] h-[42%] w-[7px] rounded-sm bg-amber-500/55" />
-        <div className="absolute bottom-0 right-[36%] h-[42%] w-[7px] rounded-sm bg-amber-500/55" />
-      </div>
-    </div>
-  );
-}
-
-function BowlArt() {
-  return (
-    <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-b from-green-50 to-green-100/50">
-      <div
-        className="absolute bottom-[24%] left-[18%] right-[18%] h-[46%] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 35%, rgba(134,239,172,0.8), rgba(34,197,94,0.55) 60%, rgba(21,128,61,0.3) 100%)",
-          boxShadow: "inset 0 0 0 6px rgba(251,191,36,0.35)",
-        }}
-      />
-      <div className="absolute bottom-[18%] left-[22%] right-[22%] h-[18%] rounded-b-full bg-gradient-to-b from-white/60 to-white/20" />
-    </div>
-  );
-}
-
-const samples: SampleCard[] = [
-  { id: "shirt", label: "Tee sample", art: <ShirtArt /> },
-  { id: "chair", label: "Chair sample", art: <ChairArt /> },
-  { id: "bowl", label: "Bowl sample", art: <BowlArt /> },
-];
-
 const evidenceLegend = [
   {
     title: "Observed",
-    body: "Direct pixel evidence identified with 99%+ confidence.",
+    body: "What the AI can clearly see in the image.",
     iconColor: "text-emerald-600",
     cardBorder: "hover:border-emerald-300/60",
     icon: (
@@ -154,7 +65,7 @@ const evidenceLegend = [
   },
   {
     title: "Inferred",
-    body: "Logical conclusions derived from context and metadata.",
+    body: "What the AI thinks may be true based on what it sees.",
     iconColor: "text-blue-600",
     cardBorder: "hover:border-blue-300/60",
     icon: (
@@ -167,7 +78,7 @@ const evidenceLegend = [
   },
   {
     title: "Subjective",
-    body: "Qualitative assessments prone to human-centric bias.",
+    body: "A judgment that can change depending on taste or context.",
     iconColor: "text-amber-600",
     cardBorder: "hover:border-amber-300/60",
     icon: (
@@ -179,7 +90,7 @@ const evidenceLegend = [
   },
   {
     title: "Unsupported",
-    body: "Claims with insufficient or contradictory visual proof.",
+    body: "A statement the image does not clearly prove.",
     iconColor: "text-red-500",
     cardBorder: "hover:border-red-300/60",
     icon: (
@@ -189,6 +100,12 @@ const evidenceLegend = [
       </svg>
     ),
   },
+];
+
+const stats = [
+  { value: "1", label: "See what the AI saw" },
+  { value: "2", label: "Explain why it said it" },
+  { value: "3", label: "Flag what may be uncertain" },
 ];
 
 function UploadIcon() {
@@ -253,11 +170,23 @@ function NavIcon({ kind }: { kind: "audit" | "domains" | "history" | "claims" })
   );
 }
 
-const stats = [
-  { value: "34K+", label: "Images audited" },
-  { value: "99.2%", label: "Avg. precision" },
-  { value: "<200ms", label: "Median latency" },
-];
+function PackIcon() {
+  return (
+    <svg viewBox="0 0 24 24" {...svgProps}>
+      <path d="M12 2 2 7l10 5 10-5-10-5Z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  );
+}
+
+function PlusIcon() {
+  return (
+    <svg viewBox="0 0 24 24" {...svgProps}>
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  );
+}
 
 async function readImageDimensions(file: File) {
   const objectUrl = URL.createObjectURL(file);
@@ -266,44 +195,342 @@ async function readImageDimensions(file: File) {
     const dimensions = await new Promise<{ width: number; height: number }>(
       (resolve, reject) => {
         const image = new Image();
-
-        image.onload = () => {
-          resolve({ width: image.naturalWidth, height: image.naturalHeight });
-        };
+        image.onload = () => resolve({ width: image.naturalWidth, height: image.naturalHeight });
         image.onerror = () => reject(new Error("Failed to read image dimensions."));
         image.src = objectUrl;
       },
     );
-
     return dimensions;
   } finally {
     URL.revokeObjectURL(objectUrl);
   }
 }
 
-export function LandingPage() {
-  const inputId = useId();
-  const [selectedDomainId, setSelectedDomainId] = useState(domains[0].id);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [fileName, setFileName] = useState<string | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [uploadState, setUploadState] = useState<UploadState>({ kind: "idle" });
+function PackCard({
+  pack,
+  active,
+  isDemo,
+  onClick,
+}: {
+  pack: DomainPack;
+  active: boolean;
+  isDemo?: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`w-full rounded-xl px-3.5 py-3 text-left transition ${
+        active
+          ? "border border-violet-400/60 bg-violet-100/70 text-[#0f0f14] shadow-[0_0_0_3px_rgba(139,92,246,0.12)] ring-1 ring-violet-400/30"
+          : "border border-transparent text-black/45 hover:bg-black/[0.03] hover:text-black/70"
+      }`}
+    >
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2.5">
+          <span
+            className={`mt-0.5 size-[18px] shrink-0 transition ${active ? "text-violet-600" : "text-black/22"}`}
+          >
+            <PackIcon />
+          </span>
+          <span>
+            <span className={`block text-[0.9rem] leading-tight ${active ? "font-semibold" : "font-medium"}`}>
+              {pack.name}
+            </span>
+            <small
+              className={`text-[0.77rem] leading-[1.45] ${active ? "text-black/50" : "text-black/28"}`}
+            >
+              {pack.description}
+            </small>
+          </span>
+        </div>
+        <div className="mt-0.5 flex shrink-0 items-center gap-1.5">
+          {isDemo && (
+            <span className="rounded-full border border-violet-300/60 bg-violet-50 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-violet-600">
+              Demo
+            </span>
+          )}
+          {active && (
+            <span className="flex size-[18px] items-center justify-center rounded-full bg-violet-600 text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="size-[11px]">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </span>
+          )}
+        </div>
+      </div>
+      {active && (
+        <div className="mt-2.5 flex flex-wrap gap-2 pl-[calc(18px+10px)]">
+          <span className="rounded-lg bg-white px-2 py-1 text-[0.72rem] font-medium text-black/40">
+            {pack.observable_entities.length} things to see
+          </span>
+          <span className="rounded-lg bg-white px-2 py-1 text-[0.72rem] font-medium text-black/40">
+            {pack.principles.length} explanation rules
+          </span>
+          <span className="rounded-lg bg-white px-2 py-1 text-[0.72rem] font-medium text-red-400/70">
+            {pack.forbidden_claims.length} limits
+          </span>
+        </div>
+      )}
+    </button>
+  );
+}
 
-  const selectedDomain = domains.find((d) => d.id === selectedDomainId) ?? domains[0];
+function CreatePackModal({
+  onClose,
+  onSubmit,
+}: {
+  onClose: () => void;
+  onSubmit: (pack: DomainPack) => void;
+}) {
+  const [form, setForm] = useState<CreatePackForm>({
+    name: "",
+    description: "",
+    entities: "",
+    principles: "",
+    forbidden: "",
+  });
+  const [error, setError] = useState("");
+  const nameRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    return () => {
-      if (previewUrl) URL.revokeObjectURL(previewUrl);
+    nameRef.current?.focus();
+  }, []);
+
+  const parseLines = (text: string) =>
+    text
+      .split("\n")
+      .map((l) => l.trim())
+      .filter(Boolean);
+
+  const handleSubmit = () => {
+    if (!form.name.trim()) {
+      setError("Check name is required.");
+      return;
+    }
+
+    const entities = parseLines(form.entities);
+    const principles = parseLines(form.principles);
+    const forbidden = parseLines(form.forbidden);
+
+    if (entities.length === 0) {
+      setError("Add at least one thing to look for.");
+      return;
+    }
+
+    const pack: DomainPack = {
+      id: `custom-${Date.now()}`,
+      name: form.name.trim(),
+      description: form.description.trim() || "Custom image check.",
+      observable_entities: entities,
+      observation_categories: [
+        "proportion", "contrast", "texture", "color",
+        "shape", "position", "symmetry", "other",
+      ],
+      item_categories: ["entity", "region", "object", "other"],
+      subject_types: ["subject", "object", "region", "other"],
+      principles,
+      forbidden_claims: forbidden,
+      confidence_reducers: [
+        "poor lighting",
+        "significant occlusion",
+        "unusual angle",
+        "motion blur",
+      ],
+      example_observations: [],
+      example_forbidden: [],
     };
-  }, [previewUrl]);
+
+    onSubmit(pack);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center p-4 sm:items-center">
+      <div
+        className="absolute inset-0 bg-black/30 backdrop-blur-sm"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <div className="relative w-full max-w-[520px] rounded-3xl border border-black/[0.08] bg-white p-6 shadow-2xl">
+        <div className="mb-5 flex items-center justify-between">
+          <div>
+            <h2 className="text-[1.1rem] font-bold tracking-tight text-[#0f0f14]">
+              Create your check
+            </h2>
+            <p className="mt-0.5 text-[0.82rem] text-black/40">
+              Tell the AI what to look for and what it should not claim.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="flex size-8 items-center justify-center rounded-xl border border-black/[0.08] text-black/35 transition hover:bg-black/[0.04] hover:text-black/60"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="grid gap-3.5">
+          <div>
+            <label className="mb-1.5 block text-[0.72rem] font-bold uppercase tracking-[0.12em] text-black/35">
+              Check Name
+            </label>
+            <input
+              ref={nameRef}
+              type="text"
+              value={form.name}
+              onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+              placeholder="e.g. Food Quality, Product QA, Medical Imaging"
+              className="w-full rounded-2xl border border-black/[0.09] bg-black/[0.02] px-4 py-2.5 text-[0.9rem] text-[#0f0f14] outline-none transition placeholder:text-black/25 focus:border-violet-400/70 focus:ring-4 focus:ring-violet-200/50"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-[0.72rem] font-bold uppercase tracking-[0.12em] text-black/35">
+              Description
+            </label>
+            <input
+              type="text"
+              value={form.description}
+              onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
+              placeholder="One sentence describing what this check explains."
+              className="w-full rounded-2xl border border-black/[0.09] bg-black/[0.02] px-4 py-2.5 text-[0.9rem] text-[#0f0f14] outline-none transition placeholder:text-black/25 focus:border-violet-400/70 focus:ring-4 focus:ring-violet-200/50"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-[0.72rem] font-bold uppercase tracking-[0.12em] text-black/35">
+              What to detect{" "}
+              <span className="normal-case font-normal text-black/30">(one per line)</span>
+            </label>
+            <textarea
+              value={form.entities}
+              onChange={(e) => setForm((f) => ({ ...f, entities: e.target.value }))}
+              rows={3}
+              placeholder={"cracks and surface defects\ncolor inconsistency\nmissing labels"}
+              className="w-full rounded-2xl border border-black/[0.09] bg-black/[0.02] px-4 py-3 text-[0.88rem] leading-6 text-[#0f0f14] outline-none transition placeholder:text-black/20 focus:border-violet-400/70 focus:ring-4 focus:ring-violet-200/50"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-[0.72rem] font-bold uppercase tracking-[0.12em] text-black/35">
+              How to explain it{" "}
+              <span className="normal-case font-normal text-black/30">(one per line)</span>
+            </label>
+            <textarea
+              value={form.principles}
+              onChange={(e) => setForm((f) => ({ ...f, principles: e.target.value }))}
+              rows={3}
+              placeholder={"Dark tones across connected areas can suggest visual continuity.\nMissing label in expected region may indicate a product issue."}
+              className="w-full rounded-2xl border border-black/[0.09] bg-black/[0.02] px-4 py-3 text-[0.88rem] leading-6 text-[#0f0f14] outline-none transition placeholder:text-black/20 focus:border-violet-400/70 focus:ring-4 focus:ring-violet-200/50"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-[0.72rem] font-bold uppercase tracking-[0.12em] text-red-400/80">
+              Claims to avoid{" "}
+              <span className="normal-case font-normal text-black/30">(one per line)</span>
+            </label>
+            <textarea
+              value={form.forbidden}
+              onChange={(e) => setForm((f) => ({ ...f, forbidden: e.target.value }))}
+              rows={2}
+              placeholder={"Do not claim personal taste as fact.\nDo not make safety diagnoses."}
+              className="w-full rounded-2xl border border-red-200/60 bg-red-50/30 px-4 py-3 text-[0.88rem] leading-6 text-[#0f0f14] outline-none transition placeholder:text-black/20 focus:border-red-300/70 focus:ring-4 focus:ring-red-100/60"
+            />
+          </div>
+        </div>
+
+        {error && (
+          <p className="mt-3 text-[0.82rem] font-medium text-red-500">{error}</p>
+        )}
+
+        <div className="mt-5 flex items-center justify-end gap-3">
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-2xl border border-black/[0.09] px-4 py-2.5 text-[0.88rem] font-medium text-black/50 transition hover:bg-black/[0.03] hover:text-black/70"
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            onClick={handleSubmit}
+            className="rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-2.5 text-[0.88rem] font-semibold text-white shadow-[0_6px_18px_rgba(99,102,241,0.28)] transition hover:-translate-y-0.5"
+          >
+            Create Check
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function validateDomainPack(value: unknown): value is DomainPack {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) return false;
+  const v = value as Record<string, unknown>;
+  return (
+    typeof v.id === "string" &&
+    typeof v.name === "string" &&
+    typeof v.description === "string" &&
+    Array.isArray(v.observable_entities) &&
+    Array.isArray(v.observation_categories) &&
+    Array.isArray(v.item_categories) &&
+    Array.isArray(v.subject_types) &&
+    Array.isArray(v.principles) &&
+    Array.isArray(v.forbidden_claims)
+  );
+}
+
+export function LandingPage() {
+  const inputId = useId();
+  const packJsonInputId = useId();
+  const { files, setFiles, focusPrompt, setFocusPrompt, selectedPack, setSelectedPack, customPacks, addCustomPack } =
+    useAudit();
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadState, setUploadState] = useState<UploadState>({ kind: "idle" });
+  const [showCreatePack, setShowCreatePack] = useState(false);
+  const [packUploadError, setPackUploadError] = useState<string | null>(null);
+
+  const handlePackJsonFile = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const parsed: unknown = JSON.parse(ev.target?.result as string);
+        if (validateDomainPack(parsed)) {
+          addCustomPack(parsed);
+          setPackUploadError(null);
+        } else {
+          setPackUploadError(
+            "Invalid pack JSON — must include id, name, description, and arrays for observable_entities, observation_categories, item_categories, subject_types, principles, and forbidden_claims.",
+          );
+        }
+      } catch {
+        setPackUploadError("Could not parse file as JSON.");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  };
+
+  const fileName = files[0]?.name ?? null;
+
+  useEffect(() => {
+    if (files[0]) {
+      const url = URL.createObjectURL(files[0]);
+      setPreviewUrl(url);
+      return () => URL.revokeObjectURL(url);
+    } else {
+      setPreviewUrl(null);
+    }
+  }, [files]);
 
   const handleSelectedFile = async (file: File) => {
-    setFileName(file.name);
-    setPreviewUrl((curr) => {
-      if (curr) URL.revokeObjectURL(curr);
-      return URL.createObjectURL(file);
-    });
-
+    setFiles([file]);
     setUploadState({ kind: "uploading" });
 
     try {
@@ -320,13 +547,13 @@ export function LandingPage() {
         body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error("Upload request failed.");
-      }
+      const payload = await parseApiJson<{ record?: { image_id?: string }; error?: string }>(
+        response,
+        "Upload",
+      );
 
-      const payload = (await response.json()) as {
-        record?: { image_id?: string };
-      };
+      if (!response.ok) throw new Error(payload.error ?? "Upload request failed.");
+
       const imageId = payload.record?.image_id;
 
       setUploadState({
@@ -357,17 +584,16 @@ export function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#f6f6fa] text-[#0f0f14]">
-      {/* Ambient background glows */}
+      {/* Ambient glows */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -left-[280px] -top-[240px] h-[700px] w-[700px] rounded-full bg-violet-300/20 blur-[160px]" />
         <div className="absolute -right-[320px] top-[25%] h-[600px] w-[600px] rounded-full bg-indigo-300/15 blur-[140px]" />
         <div className="absolute bottom-[8%] left-[30%] h-[400px] w-[500px] rounded-full bg-violet-200/12 blur-[120px]" />
       </div>
 
-      {/* Sticky top navbar */}
+      {/* Navbar */}
       <header className="sticky top-0 z-30 border-b border-black/[0.07] bg-[#f6f6fa]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-[58px] max-w-[1160px] items-center justify-between gap-8 px-5 md:px-8">
-          {/* Logo */}
           <div className="flex shrink-0 items-center gap-2.5">
             <div className="flex h-[30px] w-[30px] items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 shadow-[0_4px_14px_rgba(109,40,217,0.35)]">
               <span className="text-[9px] font-black tracking-tight text-white">VA</span>
@@ -377,9 +603,8 @@ export function LandingPage() {
             </span>
           </div>
 
-          {/* Desktop nav links */}
           <nav className="hidden items-center gap-0.5 md:flex">
-            {(["Audit", "Domains", "History", "Claims"] as const).map((item, i) => (
+            {(["Audit", "Checks", "History", "Claims"] as const).map((item, i) => (
               <button
                 key={item}
                 type="button"
@@ -394,7 +619,6 @@ export function LandingPage() {
             ))}
           </nav>
 
-          {/* Account */}
           <button
             type="button"
             aria-label="Account"
@@ -407,30 +631,28 @@ export function LandingPage() {
         </div>
       </header>
 
-      {/* Page content */}
       <main className="relative mx-auto max-w-[1160px] px-5 pb-32 pt-12 md:px-8 lg:pb-16">
-        {/* ── Hero ── */}
+        {/* Hero */}
         <div className="mb-11 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-300/60 bg-violet-50 px-3.5 py-1.5 text-xs font-medium tracking-wide text-violet-600">
             <span className="size-1.5 rounded-full bg-violet-500" />
-            Visual Claim Intelligence Engine
+            Visual AI Reasoning Check
           </div>
 
-          <h1 className="mb-5 text-[clamp(2.9rem,7.5vw,5.6rem)] font-bold leading-[0.93] tracking-[-0.046em]">
-            <span className="text-[#0f0f14]">Trust what </span>
-            <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              visual AI
-            </span>
+          <h1 className="mb-5 text-[clamp(2.9rem,7.5vw,5.6rem)] font-bold leading-[1.2] tracking-[-0.046em]">
+            <span className="text-[#0f0f14]">AI gave you advice.</span>
             <br />
-            <span className="text-[#0f0f14]">actually sees.</span>
+            <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
+              But why?
+            </span>
           </h1>
 
-          <p className="mx-auto max-w-[440px] text-[1.05rem] leading-relaxed text-black/40">
-            Upload an image. We audit every AI claim—separating observed facts
-            from inferences, subjective reads, and unsupported assertions.
+          <p className="mx-auto max-w-[660px] text-[1.05rem] leading-relaxed text-black/45">
+            VisualAudit shows what the AI saw, why it made a claim, and what it
+            might be guessing. Fashion is the demo. The real product is clearer
+            image-based AI reasoning.
           </p>
 
-          {/* Stats row */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-10">
             {stats.map((s, i) => (
               <div key={s.label} className="flex items-center gap-6">
@@ -438,17 +660,155 @@ export function LandingPage() {
                   <p className="text-[1.3rem] font-bold tracking-[-0.03em] text-[#0f0f14]">
                     {s.value}
                   </p>
-                  <p className="text-[0.78rem] text-black/35">{s.label}</p>
+                  <p className="max-w-[120px] text-[0.78rem] leading-snug text-black/35">
+                    {s.label}
+                  </p>
                 </div>
-                {i < stats.length - 1 && (
-                  <div className="h-8 w-px bg-black/[0.09]" />
-                )}
+                {i < stats.length - 1 && <div className="h-8 w-px bg-black/[0.09]" />}
               </div>
             ))}
           </div>
         </div>
 
-        {/* ── Main grid ── */}
+        {/* Concrete before / after */}
+        <section className="mb-10 rounded-3xl border border-violet-100/80 bg-gradient-to-br from-violet-50/70 via-white/30 to-indigo-50/50 p-6 md:p-8">
+          {/* Section header */}
+          <div className="mb-6 text-center">
+            <span className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-violet-500">
+              The difference
+            </span>
+            <p className="mt-1.5 text-[1.1rem] font-bold tracking-[-0.03em] text-[#0f0f14]">
+              Same image. Completely different answer.
+            </p>
+          </div>
+
+          <div className="relative grid gap-4 lg:grid-cols-2">
+            {/* Left — Normal AI: sparse, incomplete */}
+            <article className="rounded-2xl border border-black/[0.07] bg-white/40 p-5 backdrop-blur-sm">
+              <div className="mb-4 inline-flex rounded-full bg-black/[0.06] px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-black/35">
+                Normal AI Output
+              </div>
+
+              <p className="text-[clamp(1.25rem,2.6vw,1.9rem)] font-bold leading-tight tracking-[-0.04em] text-black/45">
+                "This outfit flatters your proportions."
+              </p>
+
+              {/* Missing-feature rows — borrowed from pricing comparison tables */}
+              <div className="mt-4 grid gap-2">
+                <p className="mb-0.5 text-[0.67rem] font-bold uppercase tracking-[0.13em] text-black/25">
+                  What's missing
+                </p>
+                {[
+                  "What exactly it saw",
+                  "Why it made that claim",
+                  "How certain it is",
+                ].map((label) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-2.5 rounded-xl border border-dashed border-black/[0.09] bg-white/30 px-3.5 py-2.5"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="size-3.5 shrink-0 text-red-400/60"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                    <span className="text-[0.84rem] text-black/32">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            {/* "vs" pill — centered in the column gap on desktop */}
+            <div
+              aria-hidden="true"
+              className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 lg:flex"
+            >
+              <span className="rounded-full border border-violet-200/80 bg-white px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wide text-violet-400 shadow-sm">
+                vs
+              </span>
+            </div>
+
+            {/* Right — VisualAudit: elevated, structured, rich */}
+            <article className="rounded-2xl border border-violet-200/80 bg-white/85 p-5 shadow-[0_4px_28px_rgba(109,40,217,0.09)]">
+              <div className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-violet-600">
+                <span className="size-1.5 rounded-full bg-violet-500" />
+                VisualAudit Output
+              </div>
+
+              <div className="mb-3.5">
+                <p className="mb-0.5 text-[0.67rem] font-bold uppercase tracking-[0.14em] text-black/28">
+                  Claim
+                </p>
+                <p className="text-[1.1rem] font-bold leading-snug tracking-[-0.025em] text-[#0f0f14]">
+                  The outfit creates stronger vertical continuity.
+                </p>
+              </div>
+
+              <div className="grid gap-2.5">
+                {/* Evidence block — why it thinks this */}
+                <div className="rounded-xl bg-emerald-50/80 p-3.5">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[0.62rem] font-bold uppercase tracking-wide text-emerald-700">
+                      Observed
+                    </span>
+                    <p className="text-[0.7rem] font-semibold text-emerald-700/55">
+                      Why the AI thinks this
+                    </p>
+                  </div>
+                  <ul className="grid gap-1.5">
+                    {[
+                      "Similar dark tones from torso to legs",
+                      "Few strong horizontal breaks",
+                      "Silhouette edge stays mostly continuous",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2 text-[0.86rem] leading-[1.5] text-black/55"
+                      >
+                        <span className="mt-[6px] size-1.5 shrink-0 rounded-full bg-emerald-400" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Uncertainty block */}
+                <div className="rounded-xl bg-amber-50/80 p-3.5">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[0.62rem] font-bold uppercase tracking-wide text-amber-700">
+                      Uncertain
+                    </span>
+                    <p className="text-[0.7rem] font-semibold text-amber-700/55">
+                      What may be off
+                    </p>
+                  </div>
+                  <ul className="grid gap-1.5">
+                    {[
+                      "Mirror angle hides part of the lower silhouette",
+                      "Lighting may change how contrast appears",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2 text-[0.86rem] leading-[1.5] text-black/55"
+                      >
+                        <span className="mt-[6px] size-1.5 shrink-0 rounded-full bg-amber-400" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* Main grid */}
         <div className="grid items-start gap-5 lg:grid-cols-[1fr_308px]">
           {/* Upload zone */}
           <section
@@ -464,19 +824,16 @@ export function LandingPage() {
             onDragLeave={() => setIsDragging(false)}
             onDrop={handleDrop}
           >
-            {/* Dot grid texture */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 opacity-[0.5]"
               style={{
-                backgroundImage:
-                  "radial-gradient(rgba(0,0,0,0.055) 1px, transparent 1px)",
+                backgroundImage: "radial-gradient(rgba(0,0,0,0.055) 1px, transparent 1px)",
                 backgroundSize: "22px 22px",
               }}
             />
 
             <div className="relative z-10 p-6 md:p-8">
-              {/* Drop / preview area */}
               <div
                 className={`flex min-h-[240px] items-center justify-center overflow-hidden rounded-xl border-2 border-dashed transition-colors md:min-h-[300px] ${
                   isDragging
@@ -506,17 +863,16 @@ export function LandingPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-black/60">
-                        {isDragging ? "Release to analyze" : "Drop your image here"}
+                        {isDragging ? "Release to check it" : "Drop your image here"}
                       </p>
                       <p className="mt-1 text-[0.82rem] text-black/30">
-                        JPEG · PNG · TIFF &nbsp;·&nbsp; Max 25 MB
+                        JPEG · PNG · TIFF &nbsp;·&nbsp; Max 10 MB
                       </p>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* File actions */}
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <input
                   id={inputId}
@@ -541,7 +897,7 @@ export function LandingPage() {
                 )}
                 {uploadState.kind === "uploading" && (
                   <span className="text-[0.82rem] font-medium text-violet-600">
-                    Uploading and saving metadata...
+                    Uploading...
                   </span>
                 )}
                 {uploadState.kind === "success" && (
@@ -555,74 +911,77 @@ export function LandingPage() {
                   </span>
                 )}
               </div>
+
+              <div className="mt-5">
+                <label
+                  htmlFor="landing-focus-prompt"
+                  className="mb-2 block text-[0.7rem] font-bold uppercase tracking-[0.13em] text-black/30"
+                >
+                  Claim or Question to Verify
+                </label>
+                <textarea
+                  id="landing-focus-prompt"
+                  value={focusPrompt}
+                  onChange={(e) => setFocusPrompt(e.target.value)}
+                  rows={6}
+                  placeholder={`Paste what an AI told you about this image, or ask a question to verify.\nExample: "The AI said this creates a slimming effect — is that visible?"`}
+                  className="min-h-[168px] w-full resize-y rounded-2xl border border-black/[0.09] bg-white/80 px-4 py-3 text-[0.88rem] leading-6 text-black/70 outline-none transition placeholder:text-black/25 focus:border-violet-400/70 focus:ring-4 focus:ring-violet-200/50"
+                />
+              </div>
             </div>
           </section>
 
           {/* Right panel */}
           <div className="grid gap-4">
-            {/* Domain selector */}
+            {/* Pack selector */}
             <section className="rounded-2xl border border-black/[0.07] bg-white/70 p-5 shadow-sm">
               <p className="mb-4 text-[0.7rem] font-bold uppercase tracking-[0.13em] text-black/30">
-                Audit Domain
+                What to Check
               </p>
-              <div className="grid gap-1.5">
-                {domains.map((domain) => {
-                  const active = domain.id === selectedDomainId;
-                  return (
-                    <button
-                      key={domain.id}
-                      type="button"
-                      onClick={() => setSelectedDomainId(domain.id)}
-                      className={`flex w-full items-start gap-3 rounded-xl px-3.5 py-3 text-left transition ${
-                        active
-                          ? "border border-violet-300/70 bg-violet-50 text-[#0f0f14]"
-                          : "border border-transparent text-black/45 hover:bg-black/[0.03] hover:text-black/70"
-                      }`}
-                    >
-                      <span
-                        className={`mt-0.5 size-[18px] shrink-0 transition ${
-                          active ? "text-violet-500" : "text-black/22"
-                        }`}
-                      >
-                        {domain.icon}
-                      </span>
-                      <span>
-                        <span className="block text-[0.9rem] font-medium leading-tight">
-                          {domain.label}
-                        </span>
-                        <small
-                          className={`text-[0.77rem] leading-[1.45] ${
-                            active ? "text-black/45" : "text-black/28"
-                          }`}
-                        >
-                          {domain.note}
-                        </small>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </section>
 
-            {/* Audit parameters */}
-            <section className="rounded-2xl border border-black/[0.07] bg-white/70 p-5 shadow-sm">
-              <p className="mb-4 text-[0.7rem] font-bold uppercase tracking-[0.13em] text-black/30">
-                Parameters
-              </p>
-              <div className="grid gap-2.5">
-                <div className="flex items-center justify-between rounded-xl bg-black/[0.03] px-4 py-3">
-                  <span className="text-[0.88rem] text-black/50">Precision Level</span>
-                  <span className="rounded-lg border border-emerald-300/60 bg-emerald-50 px-2.5 py-1 text-[0.8rem] font-bold text-emerald-700">
-                    {selectedDomain.precision}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between rounded-xl bg-black/[0.03] px-4 py-3">
-                  <span className="text-[0.88rem] text-black/50">Latency Target</span>
-                  <span className="rounded-lg border border-blue-300/60 bg-blue-50 px-2.5 py-1 text-[0.8rem] font-bold text-blue-700">
-                    {selectedDomain.latency}
-                  </span>
-                </div>
+              <div className="grid gap-1.5">
+                {builtInPacks.map((pack) => (
+                  <PackCard
+                    key={pack.id}
+                    pack={pack}
+                    active={selectedPack.id === pack.id}
+                    isDemo
+                    onClick={() => setSelectedPack(pack)}
+                  />
+                ))}
+
+                {customPacks.map((pack) => (
+                  <PackCard
+                    key={pack.id}
+                    pack={pack}
+                    active={selectedPack.id === pack.id}
+                    onClick={() => setSelectedPack(pack)}
+                  />
+                ))}
               </div>
+
+              <div className="mt-3">
+                <label
+                  htmlFor={packJsonInputId}
+                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-black/[0.12] px-3 py-2.5 text-[0.84rem] text-black/35 transition hover:border-violet-300/70 hover:bg-violet-50/60 hover:text-violet-600"
+                >
+                  <span className="size-[15px] shrink-0">
+                    <UploadIcon />
+                  </span>
+                  Upload JSON
+                </label>
+                <input
+                  id={packJsonInputId}
+                  type="file"
+                  accept=".json,application/json"
+                  className="sr-only"
+                  onChange={handlePackJsonFile}
+                />
+              </div>
+
+              {packUploadError ? (
+                <p className="mt-2 text-[0.78rem] font-medium text-red-500">{packUploadError}</p>
+              ) : null}
             </section>
 
             {/* CTA */}
@@ -630,7 +989,7 @@ export function LandingPage() {
               href="/visual-audit"
               className="flex w-full items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-4 text-[1rem] font-bold text-white shadow-[0_8px_28px_rgba(109,40,217,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(109,40,217,0.4)]"
             >
-              <span>Audit this image</span>
+              <span>Audit a claim</span>
               <span className="size-[18px]">
                 <ArrowIcon />
               </span>
@@ -638,7 +997,7 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* ── Evidence legend ── */}
+        {/* Evidence legend */}
         <div className="mt-12 grid gap-4 border-t border-black/[0.07] pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {evidenceLegend.map((item) => (
             <article
@@ -659,7 +1018,7 @@ export function LandingPage() {
         </div>
       </main>
 
-      {/* Mobile bottom nav */}
+      {/* Mobile nav */}
       <nav
         aria-label="Primary"
         className="fixed bottom-4 left-1/2 z-20 flex w-[calc(100%-32px)] max-w-[480px] -translate-x-1/2 gap-1 rounded-2xl border border-black/[0.08] bg-white/95 p-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden"
@@ -667,18 +1026,15 @@ export function LandingPage() {
         {(
           [
             { kind: "audit" as const, label: "Audit", active: true },
-            { kind: "domains" as const, label: "Domains", active: false },
-            { kind: "history" as const, label: "History", active: false },
-            { kind: "claims" as const, label: "Claims", active: false },
+            { kind: "domains" as const, label: "Checks", active: false },
+            { kind: "history" as const, label: "History", active: false }
           ] as const
         ).map((item) => (
           <button
             key={item.kind}
             type="button"
             className={`flex flex-1 flex-col items-center gap-1 rounded-xl py-2 transition ${
-              item.active
-                ? "bg-violet-50 text-violet-600"
-                : "text-black/32 hover:text-black/60"
+              item.active ? "bg-violet-50 text-violet-600" : "text-black/32 hover:text-black/60"
             }`}
           >
             <span className="size-[20px]">
@@ -688,6 +1044,17 @@ export function LandingPage() {
           </button>
         ))}
       </nav>
+
+      {/* Create Pack modal */}
+      {showCreatePack && (
+        <CreatePackModal
+          onClose={() => setShowCreatePack(false)}
+          onSubmit={(pack) => {
+            addCustomPack(pack);
+            setShowCreatePack(false);
+          }}
+        />
+      )}
     </div>
   );
 }

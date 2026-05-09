@@ -2,16 +2,16 @@ import { Buffer } from "node:buffer";
 
 import { NextResponse } from "next/server";
 
-import {
-  parseVisionObservationResult,
-  visionObservationJsonSchema,
-} from "../../../../lib/visualAudit/schemas";
-import { VISION_OBSERVATION_PROMPT } from "../../../../lib/visualAudit/visionObservationPrompt";
+import { fashionPack } from "../../../../lib/domainPacks/fashion";
+import type { DomainPack } from "../../../../lib/domainPacks/types";
+import { buildObservationPrompt } from "../../../../lib/visualAudit/buildObservationPrompt";
+import { buildVisionSchema, parseVisionObservationResult } from "../../../../lib/visualAudit/schemas";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses";
+const VISION_OBSERVATION_MODEL = "gpt-5.5";
 const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024;
 const MAX_FILE_COUNT = 4;
 
@@ -100,18 +100,53 @@ async function fileToDataUrl(file: File) {
   return `data:${contentType};base64,${fileBuffer.toString("base64")}`;
 }
 
-async function analyzeImages(dataUrls: string[], focusPrompt: string | null, apiKey: string) {
+function parseDomainPack(raw: string): DomainPack {
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+
+    if (
+      !isObject(parsed) ||
+      typeof parsed.id !== "string" ||
+      typeof parsed.name !== "string" ||
+      !Array.isArray(parsed.item_categories) ||
+      !Array.isArray(parsed.subject_types) ||
+      !Array.isArray(parsed.observation_categories)
+    ) {
+      return fashionPack;
+    }
+
+    return parsed as DomainPack;
+  } catch {
+    return fashionPack;
+  }
+}
+
+async function analyzeImages(
+  dataUrls: string[],
+  focusPrompt: string | null,
+  pack: DomainPack,
+  apiKey: string,
+) {
+  const schema = buildVisionSchema(
+    pack.item_categories,
+    pack.subject_types,
+    pack.observation_categories,
+  );
+
+  const systemPrompt = buildObservationPrompt(pack);
+
   const userContent = [
     {
       type: "input_text" as const,
-      text:
-        "Analyze these outfit images and return the VisionObservationResult JSON. Use the first image as the primary frame for any localized regions or bounding boxes. Use the additional images only as supporting context.",
+      text: `Analyze these images using the "${pack.name}" domain pack and return the VisionObservationResult JSON. Use the first image as the primary frame for any localized regions or bounding boxes. Use additional images only as supporting context.`,
     },
     ...(focusPrompt
       ? [
           {
             type: "input_text" as const,
-            text: `User focus: ${focusPrompt}`,
+            text: `User visual focus: ${focusPrompt}
+
+Use this only to prioritize directly observable evidence in the image. Do not answer the question, give advice, or infer non-visible traits in this vision observation call.`,
           },
         ]
       : []),
@@ -128,16 +163,11 @@ async function analyzeImages(dataUrls: string[], focusPrompt: string | null, api
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "gpt-5.4-mini",
+      model: VISION_OBSERVATION_MODEL,
       input: [
         {
           role: "system",
-          content: [
-            {
-              type: "input_text",
-              text: VISION_OBSERVATION_PROMPT,
-            },
-          ],
+          content: [{ type: "input_text", text: systemPrompt }],
         },
         {
           role: "user",
@@ -149,7 +179,7 @@ async function analyzeImages(dataUrls: string[], focusPrompt: string | null, api
           type: "json_schema",
           name: "vision_observation_result",
           strict: true,
-          schema: visionObservationJsonSchema,
+          schema,
         },
       },
     }),
@@ -173,9 +203,7 @@ async function analyzeImages(dataUrls: string[], focusPrompt: string | null, api
     throw new Error("OpenAI did not return structured output text.");
   }
 
-  const parsedPayload = JSON.parse(outputText) as unknown;
-
-  return parseVisionObservationResult(parsedPayload);
+  return parseVisionObservationResult(JSON.parse(outputText) as unknown);
 }
 
 export async function POST(request: Request) {
@@ -195,10 +223,17 @@ export async function POST(request: Request) {
       .filter((value): value is File => value instanceof File);
     const legacyFile = formData.get("file");
     const focusPromptValue = formData.get("focusPrompt");
+    const packValue = formData.get("pack");
+
     const focusPrompt =
       typeof focusPromptValue === "string" && focusPromptValue.trim().length > 0
         ? focusPromptValue.trim()
         : null;
+
+    const pack =
+      typeof packValue === "string" && packValue.trim().length > 0
+        ? parseDomainPack(packValue.trim())
+        : fashionPack;
 
     const normalizedFiles =
       files.length > 0
@@ -238,7 +273,7 @@ export async function POST(request: Request) {
     }
 
     const dataUrls = await Promise.all(normalizedFiles.map(fileToDataUrl));
-    const result = await analyzeImages(dataUrls, focusPrompt, apiKey);
+    const result = await analyzeImages(dataUrls, focusPrompt, pack, apiKey);
 
     return NextResponse.json({ ok: true, result });
   } catch (error) {

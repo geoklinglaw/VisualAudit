@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { AuditProvider } from "../components/audit-context";
 
 export const metadata: Metadata = {
   title: "VisualAudit",
-  description: "Landing page for auditing image-based AI claims.",
+  description: "See what image-based AI saw, inferred, and may be guessing.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuditProvider>{children}</AuditProvider>
+      </body>
     </html>
   );
 }
